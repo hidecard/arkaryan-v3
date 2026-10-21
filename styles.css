@@ -188,3 +188,32 @@ header nav a.is-active:after{content:'';position:absolute;left:50%;bottom:3px;wi
 #projects article h3,#services .card h3,#experience .card h3{position:relative;width:max-content;max-width:100%}#projects article h3:after,#services .card h3:after{content:'';position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--accent);transition:width .3s var(--motion-ease)}#projects article:hover h3:after,#services .card:hover h3:after{width:100%}
 @media(max-width:640px){.back-to-top{right:16px;bottom:16px;width:38px;height:38px}.availability-badge{font-size:9px;margin-bottom:18px}}
 @media(prefers-reduced-motion:reduce){.availability-badge span{animation:none}.mobile-menu,.project-modal>div{animation:none}.project-card:hover .h-3{transform:none}.theme-toggle svg{transition:none}.back-to-top{transition:none}#skills .grid>div{animation:none}#experience .space-y-6>.card:before{transition:none}}
+
+
+/* reliability fixes: keep the layout usable on narrow screens and slow connections */
+html,body,#root{min-width:0;min-height:100%}
+img{display:block;max-width:100%;height:auto}
+header{-webkit-backdrop-filter:blur(18px)}
+#home .max-w-6xl>div:nth-child(2) img{max-width:100%;}
+@media(max-width:900px){
+  #home .max-w-6xl{grid-template-columns:minmax(0,1fr)!important;gap:48px!important}
+  #home .max-w-6xl>div:nth-child(2){min-height:0!important}
+  #home .max-w-6xl>div:nth-child(2) img{height:clamp(360px,55vw,550px)!important;width:100%!important;transform:none!important}
+  #experience .space-y-6{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #contact .grid{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+}
+@media(max-width:640px){
+  body{overflow-x:hidden}
+  #home .max-w-6xl{gap:36px!important}
+  #home .max-w-6xl>div:nth-child(2) img{height:clamp(280px,86vw,360px)!important}
+  #home h1{font-size:clamp(3rem,15vw,5.4rem)!important;letter-spacing:-.09em!important}
+  #home h1 span{white-space:normal!important}
+  #home .hero-metrics{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #home .hero-metric{width:100%!important}
+  #about .grid.md\\:grid-cols-2,#projects .grid.md\\:grid-cols-2{grid-template-columns:1fr!important}
+  #experience .space-y-6{grid-template-columns:1fr!important}
+  #contact .grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #contact .grid .card:last-child{grid-column:1/-1}
+  .back-to-top{right:16px;bottom:16px}
+}
+@media(prefers-reduced-motion:reduce){.scroll-reveal,.scroll-reveal.is-visible{opacity:1!important;transform:none!important;filter:none!important}}
