@@ -1,40 +1,58 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Arkar Yan is a full-stack engineer, educator, and founder from Yangon building useful web, mobile, AI, and developer products." />
-  <meta name="keywords" content="Arkar Yan, full-stack developer, software engineer, Yangon developer, React, Next.js, Flutter, AI, cybersecurity" />
-  <meta name="author" content="Arkar Yan" />
-  <meta name="robots" content="index, follow, max-image-preview:large" />
-  <meta name="theme-color" content="#16233b" />
-  <link rel="canonical" href="https://arkaryan.net/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://arkaryan.net/" />
-  <meta property="og:title" content="Arkar Yan | Full-Stack Engineer & Founder" />
-  <meta property="og:description" content="Explore Arkar Yan's work across web, mobile, AI, cybersecurity, and developer tools." />
-  <meta property="og:image" content="https://arkaryan.net/assets/profile.jpg" />
-  <meta property="og:image:alt" content="Arkar Yan profile portrait" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Arkar Yan | Full-Stack Engineer & Founder" />
-  <meta name="twitter:description" content="Full-stack engineer, educator, and founder building useful digital products." />
-  <meta name="twitter:image" content="https://arkaryan.net/assets/profile.jpg" />
-  <title>Arkar Yan | Full-Stack Engineer & Founder</title>
-  <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"Person","name":"Arkar Yan","url":"https://arkaryan.net/","jobTitle":"Full-Stack Engineer, Educator & Founder","image":"https://arkaryan.net/assets/profile.jpg","email":"mailto:info@arkaryan.net","address":{"@type":"PostalAddress","addressLocality":"Yangon","addressCountry":"Myanmar"},"sameAs":["https://github.com/hidecard","https://t.me/hidecard1","https://facebook.com/arkaryan11"]}
-  </script>
-  <script src="vendor/tailwindcss.js"></script>
-  <script>
-    tailwind.config = { darkMode: 'class', theme: { extend: { colors: { ink: '#101828', violet: '#6d5dfc', aqua: '#20c7b7' }, boxShadow: { glow: '0 20px 80px rgba(109,93,252,.18)' } } } }
-  </script>
-  <script src="vendor/react.js"></script>
-  <script src="vendor/react-dom.js"></script>
-  <script src="vendor/babel.min.js"></script>
-  <link rel="stylesheet" href="vendor/fonts.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arkar Yan is a full-stack engineer, educator, and founder building useful digital products.">
+  <meta name="theme-color" content="#160607">
+  <link rel="canonical" href="https://arkaryan.net/">
+  <link rel="stylesheet" href="vendor/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>Arkar Yan — Digital products with clarity</title>
 </head>
-<body class="bg-[#fbfbfe] text-slate-800 dark:bg-[#11111a] dark:text-slate-100 transition-colors">
-  <div id="root"></div>
-  <script type="text/babel" src="app.js"></script>
+<body>
+  <div class="site-noise" aria-hidden="true"></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
+  <header class="site-header" data-header>
+    <a class="brand" href="#home" aria-label="Arkar Yan home"><span class="brand-mark">AY</span><span class="brand-name">Arkar Yan</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#about">About</a><a href="#work">Work</a><a href="#services">Services</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="header-actions"><span class="local-time" data-time>Yangon · 00:00</span><button class="icon-button" data-theme aria-label="Toggle colour theme">◐</button><button class="menu-button" data-menu aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button></div>
+  </header>
+  <div class="mobile-menu" id="mobile-menu" data-mobile-menu>
+    <div class="mobile-menu-inner"><p class="menu-kicker">Navigate / 00</p><a href="#about">About <span>01</span></a><a href="#work">Selected work <span>02</span></a><a href="#services">Services <span>03</span></a><a href="#contact">Contact <span>04</span></a><p class="menu-note">Available for thoughtful freelance collaborations.</p></div>
+  </div>
+
+  <main>
+    <section class="hero section-dark" id="home">
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <p class="eyebrow"><span class="status-dot"></span> Available for freelance projects</p>
+          <h1>I build<br><em>digital</em><br>products.</h1>
+          <p class="hero-intro">Full-stack engineer, educator and founder creating useful experiences for the web, mobile and beyond.</p>
+          <div class="hero-actions"><a class="button button-light" href="#work">Explore my work <span>↗</span></a><a class="text-link" href="#contact">Start a conversation <span>↗</span></a></div>
+        </div>
+        <div class="hero-visual reveal reveal-delay-2">
+          <div class="hero-index">01 / INTRO</div><div class="portrait-frame"><img src="assets/hero-character.png" alt="Arkar Yan illustration"><span class="portrait-stamp">BUILD<br>WITH<br>CLARITY</span></div><div class="hero-caption"><span>Based in Yangon, Myanmar</span><span>Scroll to explore ↓</span></div>
+        </div>
+      </div>
+      <div class="hero-marquee" aria-hidden="true"><span>WEB / MOBILE / AI / EDUCATION / SYSTEMS / </span><span>WEB / MOBILE / AI / EDUCATION / SYSTEMS / </span></div>
+    </section>
+
+    <section class="intro section-paper" id="about"><div class="container split-heading"><p class="section-label">01 / About</p><div class="intro-body reveal"><h2>Ideas are only useful when they become <em>real.</em></h2><p>I’m Arkar Yan — a full-stack developer and instructor who turns complex problems into clear, dependable digital products. I care about the details people feel: a fast interface, a thoughtful flow and technology that stays out of the way.</p><a class="line-link" href="#contact">Let’s make something useful <span>↗</span></a></div></div><div class="container stat-row reveal"><div><strong data-count="10">10+</strong><span>Years building</span></div><div><strong data-count="200">200+</strong><span>Projects shipped</span></div><div><strong>14.3k</strong><span>Students taught</span></div></div></section>
+
+    <section class="work section-ink" id="work"><div class="container"><div class="section-head reveal"><p class="section-label">02 / Selected work</p><h2>Things I’ve<br><em>made.</em></h2><p class="section-description">A selection of products, tools and experiments built across different platforms and problems.</p></div><div class="filter-bar reveal" data-filters></div><div class="project-grid" data-projects></div><div class="center-action"><button class="button button-outline" data-more>Load more projects <span>↓</span></button></div></div></section>
+
+    <section class="services section-paper" id="services"><div class="container"><div class="section-head section-head-inline reveal"><div><p class="section-label">03 / What I do</p><h2>From first idea<br>to <em>finished</em> product.</h2></div><p class="section-description">I work across strategy, design and engineering to make digital work feel simple and human.</p></div><div class="service-list" data-services></div></div></section>
+
+    <section class="experience section-light" id="experience"><div class="container"><div class="section-head reveal"><p class="section-label">04 / Experience</p><h2>A decade of<br><em>learning.</em></h2></div><div class="timeline" data-experience></div></div></section>
+
+    <section class="contact section-dark" id="contact"><div class="container contact-grid reveal"><div><p class="section-label">05 / Contact</p><h2>Have a good<br><em>idea?</em></h2><p class="contact-copy">Tell me what you’re building, what is stuck or what could be better. I’ll get back to you with a clear next step.</p><a class="button button-accent" href="mailto:info@arkaryan.net">Say hello <span>↗</span></a></div><div class="contact-details"><a href="mailto:info@arkaryan.net">info@arkaryan.net</a><a href="tel:+959758430371">+95 975 843 0371</a><span>Yangon, Myanmar</span><div class="social-links"><a href="https://github.com/hidecard" target="_blank" rel="noreferrer">GitHub ↗</a><a href="https://t.me/hidecard1" target="_blank" rel="noreferrer">Telegram ↗</a></div></div></div></section>
+  </main>
+
+  <footer class="site-footer section-dark"><div class="container footer-row"><a class="brand" href="#home"><span class="brand-mark">AY</span><span class="brand-name">Arkar Yan</span></a><span>© <span data-year></span> Arkar Yan</span><span>Designed & built with intention.</span></div></footer>
+  <dialog class="project-modal" data-modal><button class="modal-close" data-close aria-label="Close project details">×</button><div data-modal-content></div></dialog>
+  <script src="app.js" defer></script>
 </body>
 </html>
