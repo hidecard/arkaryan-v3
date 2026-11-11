@@ -1,78 +1,60 @@
-const { useEffect, useState } = React;
-const h = React.createElement;
-const A = ({ href, children, className = '', ...props }) => h('a', { href, className, ...props }, children);
-const Arrow = () => h('span', { className: 'arrow', 'aria-hidden': true }, '↗');
-
-const projects = [
-  { name: 'Zap', type: 'Programming language', description: 'A simple, fast, beginner-friendly language with a clear syntax and standalone native runtime.', tech: 'Rust · Compiler · Runtime', href: 'https://github.com/hidecard/zap', mark: 'ZAP', tone: 'red' },
-  { name: 'OneKit.js', type: 'JavaScript library', description: 'A compact toolkit for DOM work, animation, reactive state, routing and everyday browser APIs.', tech: 'TypeScript · Web · Library', href: 'https://github.com/hidecard/onekit-js', mark: 'ONE', tone: 'lime' },
-  { name: 'YBS AI', type: 'AI product', description: 'An intelligent Yangon bus route guide designed to make local travel easier to understand.', tech: 'React · Maps · AI', href: 'https://ybs-mm-v2.vercel.app/', mark: 'YBS', tone: 'blue' },
-  { name: 'CSS Labs', type: 'Learning tool', description: 'A hands-on playground for learning Flexbox and Grid through live previews and generated code.', tech: 'React · CSS · Education', href: 'https://css-labs.vercel.app/', mark: 'CSS', tone: 'violet' }
+const projects=[
+ {title:'Zap Lang',category:'Developer tools',short:'ZAP',desc:'A fast, expressive programming language and developer tool focused on simplicity, performance and an enjoyable coding experience.',tags:['Compiler','WebAssembly','Developer tools'],color:'#352124',live:'https://zap-lang.hidecard1500.workers.dev/'},
+ {title:'YBS AI',category:'AI / Product',short:'YBS',desc:'An intelligent bus route guide for Yangon with interactive maps, AI route assistance and offline functionality.',tags:['React','Maps','Gemini AI'],color:'#403318',live:'https://ybs-mm-v2.vercel.app/'},
+ {title:'MM Match',category:'Bot / Platform',short:'MM',desc:'A Telegram dating bot with swipe functionality, built for reliable scale and a playful user experience.',tags:['Node.js','Telegram','Turso'],color:'#3b1d2a',live:'https://t.me/mmcupid_bot'},
+ {title:'MM Career AI',category:'AI / Product',short:'CAREER',desc:'A career guidance platform for Myanmar professionals with skill assessment, job matching and learning roadmaps.',tags:['TypeScript','AI','Vite'],color:'#25362f',live:'https://mm-career-ai.vercel.app/'},
+ {title:'DWMBlurGlass',category:'Utility',short:'GLASS',desc:'An open-source Windows utility bringing customizable blur effects and a modern take on classic Aero glass.',tags:['C++','Windows API','Open source'],color:'#24343b',live:'https://liquid-glass-ui-for-window.vercel.app/'},
+ {title:'OneKit',category:'Library',short:'ONE',desc:'A lightweight JavaScript library for DOM manipulation, animation, reactive state, routing and APIs.',tags:['JavaScript','ES Modules','Library'],color:'#49371c'},
+ {title:'CSS-Labs',category:'Tool',short:'CSS',desc:'A live playground for learning Flexbox and Grid with preview, code generation and practical experiments.',tags:['React','CSS','Education'],color:'#2e263e',live:'https://css-labs.vercel.app/'},
+ {title:'Solo VPN',category:'Mobile',short:'VPN',desc:'A native Android VPN application focused on secure protocols, encryption and high-performance connectivity.',tags:['Java','OpenVPN','Android'],color:'#1d303b'},
+ {title:'KG English',category:'Mobile',short:'KG',desc:'A gamified English learning app for young students with audio, animation and approachable lessons.',tags:['Flutter','Dart','SQLite'],color:'#42321d'},
+ {title:'Security Labs',category:'Education',short:'LABS',desc:'An interactive cybersecurity learning platform designed around practical labs and curated resources.',tags:['Next.js','Prisma','Security'],color:'#352327'}
 ];
-const experience = [
-  ['2024 — now', 'Programming Instructor & Project Manager', 'YHA Computer Training Center'],
-  ['2020 — now', 'Cybersecurity Consultant', 'Myanmar Cyber Ghost'],
-  ['2019 — now', 'Founder & CEO', 'k Square'],
-  ['2017 — now', 'Independent Software Developer', 'Freelance']
-];
-
-function Header({ menuOpen, setMenuOpen }) {
-  const nav = ['about', 'work', 'journey', 'contact'];
-  return h('header', { className: 'site-header' },
-    A({ href: '#top', className: 'wordmark', 'aria-label': 'Arkar Yan home' }, h('span', { className: 'wordmark-mark' }, 'AY'), h('span', null, 'Arkar Yan')),
-    h('nav', { className: 'desktop-nav', 'aria-label': 'Main navigation' }, nav.map(item => A({ key: item, href: '#' + item }, item[0].toUpperCase() + item.slice(1)))),
-    h('div', { className: 'header-right' }, h('span', { className: 'availability' }, h('i'), ' Open to good work'), h('button', { className: 'menu-toggle', onClick: () => setMenuOpen(!menuOpen), 'aria-expanded': menuOpen, 'aria-label': 'Toggle menu' }, h('span'), h('span'))),
-    menuOpen && h('nav', { className: 'mobile-nav', 'aria-label': 'Mobile navigation' }, nav.map((item, index) => A({ key: item, href: '#' + item, onClick: () => setMenuOpen(false) }, h('span', null, '0' + (index + 1)), item)))
-  );
+const services=[['01','Product engineering','From a clear brief to a dependable, responsive product that is ready to ship.'],['02','Web & mobile apps','Thoughtful interfaces and strong technical foundations across web, Flutter and native Android.'],['03','AI & automation','Useful AI features and workflows that solve a real problem instead of adding noise.'],['04','Teaching & mentoring','Practical guidance for people learning to build, debug and think like developers.']];
+const experience=[['2024 — Present','Programming Instructor & Project Manager','YHA Computer','Leading development projects and teaching full-stack web and mobile frameworks.'],['2020 — Present','Cybersecurity Consultant','Myanmar Cyber Ghost','Sharing practical security knowledge and providing protection strategies.'],['2019 — Present','Founder & CEO','k Square','Directing a software firm focused on custom enterprise solutions and SaaS architecture.'],['2017 — Present','Independent Software Developer','Freelance','Delivering software solutions and mentoring students through online batches.']];
+const $=(s,p=document)=>p.querySelector(s);const $$=(s,p=document)=>[...p.querySelectorAll(s)];
+function renderFilters(){const cats=['All',...new Set(projects.map(p=>p.category))];$('[data-filters]').innerHTML=cats.map((c,i)=>`<button class="${i===0?'is-active':''}" data-filter="${c}">${c}</button>`).join('');}
+let activeFilter='All',visibleCount=6;
+function projectCard(p,i){return `<article class="project-card reveal" data-category="${p.category}"><span class="project-number">0${i+1}</span><div class="project-visual" style="--project-color:${p.color}">${p.short}</div><span class="project-category">${p.category}</span><h3>${p.title}</h3><p>${p.desc}</p><div class="project-foot"><span>${p.tags.slice(0,2).join(' · ')}</span><button class="text-link" data-project="${p.title}">Details ↗</button></div></article>`}
+function renderProjects(){const list=projects.filter(p=>activeFilter==='All'||p.category===activeFilter);const shown=list.slice(0,visibleCount);$('[data-projects]').innerHTML=shown.map((p,i)=>projectCard(p,i)).join('');$('[data-more]').style.display=visibleCount>=list.length?'none':'inline-flex';observeReveals();}
+function renderServices(){$('[data-services]').innerHTML=services.map(([n,t,d])=>`<article class="service-item reveal"><span class="service-number">${n}</span><h3>${t}</h3><p>${d}</p><span class="service-arrow">↗</span></article>`).join('');}
+function renderExperience(){$('[data-experience]').innerHTML=experience.map(([date,role,company,desc])=>`<article class="timeline-item reveal"><time>${date}</time><div><h3>${role}</h3><span class="project-category">${company}</span></div><p>${desc}</p></article>`).join('');}
+function observeReveals(){const els=$$('.reveal:not(.observed)');if(!('IntersectionObserver' in window)){els.forEach(e=>e.classList.add('is-visible'));return}const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('is-visible');io.unobserve(e.target)}}),{threshold:.12});els.forEach(e=>{e.classList.add('observed');io.observe(e)});}
+function openProject(title){const p=projects.find(x=>x.title===title);if(!p)return;const modal=$('[data-modal]');$('[data-modal-content]').innerHTML=`<p class="modal-kicker">${p.category}</p><h2>${p.title}</h2><p>${p.desc}</p><div class="modal-tags">${p.tags.map(t=>`<span>${t}</span>`).join('')}</div>${p.live?`<a class="button button-accent" href="${p.live}" target="_blank" rel="noreferrer" style="margin-top:28px">Open live project <span>↗</span></a>`:''}`;modal.showModal()}
+function setup(){renderFilters();renderProjects();renderServices();renderExperience();observeReveals();$('[data-year]').textContent=new Date().getFullYear();const menu=$('[data-mobile-menu]'),menuButton=$('[data-menu]');menuButton.addEventListener('click',()=>{const open=menu.classList.toggle('is-open');menuButton.setAttribute('aria-expanded',open)});$$('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('is-open');menuButton.setAttribute('aria-expanded','false')}));$('[data-theme]').addEventListener('click',()=>{document.body.classList.toggle('theme-light');localStorage.setItem('arkaryan-visual-theme',document.body.classList.contains('theme-light')?'light':'dark')});if(localStorage.getItem('arkaryan-visual-theme')==='light')document.body.classList.add('theme-light');$('[data-filters]').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;activeFilter=b.dataset.filter;visibleCount=6;$$('[data-filter]').forEach(x=>x.classList.toggle('is-active',x===b));renderProjects()});$('[data-more]').addEventListener('click',()=>{visibleCount+=4;renderProjects()});$('[data-projects]').addEventListener('click',e=>{const b=e.target.closest('[data-project]');if(b)openProject(b.dataset.project)});$('[data-close]').addEventListener('click',()=> $('[data-modal]').close());$('[data-modal]').addEventListener('click',e=>{if(e.target===e.currentTarget)e.currentTarget.close()});window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('pointermove',onPointerMove,{passive:true});onScroll();updateTime();setInterval(updateTime,30000)}
+function onPointerMove(e){const hero=$('.hero-visual');if(!hero||window.matchMedia('(pointer:coarse)').matches)return;const x=(e.clientX/innerWidth-.5)*12;const y=(e.clientY/innerHeight-.5)*8;hero.style.setProperty('--pointer-x',`${x}px`);hero.style.setProperty('--pointer-y',`${y}px`)}
+function onScroll(){const y=window.scrollY;$('.site-header').classList.toggle('is-scrolled',y>30);const max=document.documentElement.scrollHeight-innerHeight;document.documentElement.style.setProperty('--progress',`${max?y/max*100:0}%`)}function updateTime(){const now=new Date();$('[data-time]').textContent=`Yangon · ${new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Yangon',hour:'2-digit',minute:'2-digit',hour12:false}).format(now)}`}
+function startSplash(){
+  const splash=$('[data-splash]'),percent=$('[data-loader-percent]'),circle=$('[data-loader-circle]');
+  if(!splash||!percent||!circle)return;
+  document.body.classList.add('is-loading');
+  const length=2*Math.PI*43;
+  circle.style.strokeDasharray=length;
+  circle.style.strokeDashoffset=length;
+  const started=performance.now();
+  const duration=1450;
+  let finished=false;
+  const finish=()=>{
+    if(finished)return;
+    finished=true;
+    splash.classList.add('is-complete');
+    document.body.classList.remove('is-loading');
+    setTimeout(()=>splash.remove(),1000);
+  };
+  const frame=(now)=>{
+    if(finished)return;
+    const progress=Math.min(1,Math.max(0,(now-started)/duration));
+    const value=Math.round(progress*100);
+    percent.textContent=`${value}%`;
+    circle.style.strokeDashoffset=length*(1-progress);
+    if(progress>=1) setTimeout(finish,180);
+    else if(typeof requestAnimationFrame==='function') requestAnimationFrame(frame);
+  };
+  // Draw immediately so a throttled first animation frame cannot leave the loader at 0%.
+  frame(started);
+  const fallback=setInterval(()=>frame(performance.now()),100);
+  setTimeout(()=>{clearInterval(fallback);finish()},4000);
+  // Keep the interval from running after the normal animation completes.
+  setTimeout(()=>clearInterval(fallback),duration+500);
 }
-
-function Hero() {
-  return h('section', { className: 'hero', id: 'top' },
-    h('div', { className: 'hero-grid' },
-      h('div', { className: 'hero-copy' }, h('p', { className: 'eyebrow' }, h('span', { className: 'eyebrow-line' }), ' Developer / educator / builder'), h('h1', null, 'Making the', h('br'), h('em', null, 'complex'), ' useful.'), h('p', { className: 'hero-lede' }, 'I’m Arkar Yan, a developer from Yangon building practical software, programming languages and learning tools for the web.'), h('div', { className: 'hero-links' }, h('a', { className: 'pill-link', href: '#work' }, 'Explore selected work ', h(Arrow)), A({ className: 'quiet-link', href: 'https://github.com/hidecard', target: '_blank', rel: 'noreferrer' }, 'GitHub profile ', h(Arrow)))),
-      h('div', { className: 'hero-art', 'aria-label': 'Arkar Yan portrait' }, h('div', { className: 'hero-art-label' }, '01 / PROFILE'), h('div', { className: 'portrait-wrap' }, h('img', { src: 'assets/hero-character.png', alt: 'Illustrated portrait of Arkar Yan' }), h('span', { className: 'portrait-note' }, 'BUILD', h('br'), 'WITH', h('br'), h('b', null, 'INTENT'))), h('div', { className: 'hero-meta' }, h('span', null, 'Yangon, Myanmar'), h('span', null, '16° 48′ N / 96° 09′ E')))
-    ),
-    h('div', { className: 'hero-ticker', 'aria-hidden': true }, h('span', null, 'RUST   /   TYPESCRIPT   /   REACT   /   SYSTEMS   /   EDUCATION   /   '), h('span', null, 'RUST   /   TYPESCRIPT   /   REACT   /   SYSTEMS   /   EDUCATION   /   '))
-  );
-}
-
-function About() {
-  const principles = [['01', 'Curious by default'], ['02', 'Useful over noisy'], ['03', 'Share what I learn']];
-  return h('section', { className: 'about section', id: 'about' },
-    h('div', { className: 'section-grid' },
-      h('p', { className: 'section-kicker' }, '01 / About'),
-      h('div', { className: 'about-content' },
-        h('h2', null, 'Software should feel ', h('em', null, 'clear.')),
-        h('p', { className: 'large-copy' }, 'I like turning big, messy problems into small, dependable experiences. My work moves between low-level systems and friendly interfaces — always with a focus on clarity, speed and people who are learning.'),
-        A({ className: 'under-link', href: 'https://www.linkedin.com/in/arkar-yan-6128a0291', target: '_blank', rel: 'noreferrer' }, 'More about my journey ', h(Arrow))
-      )
-    ),
-    h('div', { className: 'principles' }, principles.map(([num, text]) => h('div', { key: num }, h('strong', null, num), h('span', null, text))))
-  );
-}
-
-function ProjectCard({ project, index }) {
-  return A({ className: 'project-card project-' + project.tone, href: project.href, target: '_blank', rel: 'noreferrer' }, h('div', { className: 'project-top' }, h('span', null, '0' + (index + 1)), h('span', null, project.type)), h('div', { className: 'project-mark' }, project.mark), h('div', { className: 'project-info' }, h('h3', null, project.name), h('p', null, project.description), h('div', { className: 'project-bottom' }, h('span', null, project.tech), h(Arrow))));
-}
-function Work() {
-  return h('section', { className: 'work section', id: 'work' }, h('div', { className: 'section-intro' }, h('div', null, h('p', { className: 'section-kicker' }, '02 / Selected work'), h('h2', null, 'Built in the', h('br'), h('em', null, 'real world.'))), h('p', { className: 'section-note' }, 'A few open-source projects, products and experiments from the desk.')), h('div', { className: 'projects-grid' }, projects.map((project, index) => h(ProjectCard, { key: project.name, project, index }))), A({ className: 'all-work', href: 'https://github.com/hidecard?tab=repositories', target: '_blank', rel: 'noreferrer' }, 'View all repositories ', h(Arrow)));
-}
-function Journey() {
-  return h('section', { className: 'journey section', id: 'journey' },
-    h('div', { className: 'section-intro' },
-      h('div', null, h('p', { className: 'section-kicker' }, '03 / Journey'), h('h2', null, 'Always', h('br'), h('em', null, 'learning.'))),
-      h('p', { className: 'section-note' }, 'Teaching keeps me honest. Building keeps me curious.')
-    ),
-    h('div', { className: 'timeline' }, experience.map(([date, role, company]) => h('div', { className: 'timeline-row', key: role }, h('time', null, date), h('div', null, h('h3', null, role), h('p', null, company)), h(Arrow))))
-  );
-}
-function Contact() {
-  const links = [['GitHub', 'https://github.com/hidecard'], ['LinkedIn', 'https://www.linkedin.com/in/arkar-yan-6128a0291'], ['X / Twitter', 'https://x.com/hidecard969']];
-  return h('section', { className: 'contact section', id: 'contact' }, h('div', { className: 'contact-grid' }, h('div', null, h('p', { className: 'section-kicker' }, '04 / Say hello'), h('h2', null, 'Have a good', h('br'), h('em', null, 'idea?')), h('p', { className: 'contact-copy' }, 'I’m always interested in thoughtful products, open-source ideas and conversations about teaching technology.'), h('a', { className: 'pill-link light', href: 'mailto:info@arkaryan.net' }, 'Start a conversation ', h(Arrow))), h('div', { className: 'contact-details' }, h('span', null, 'Find me online'), h('a', { href: 'mailto:info@arkaryan.net' }, 'info@arkaryan.net'), ...links.map(([name, href]) => A({ key: name, href, target: '_blank', rel: 'noreferrer' }, name, h(Arrow))))));
-}
-function App() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  useEffect(() => { document.title = 'Arkar Yan — Developer & Builder'; }, []);
-  return h(React.Fragment, null, h(Header, { menuOpen, setMenuOpen }), h('main', null, h(Hero), h(About), h(Work), h(Journey), h(Contact)), h('footer', { className: 'footer' }, h('span', null, 'AY / ARKAR YAN'), h('span', null, '© ' + new Date().getFullYear() + ' — Made in Yangon'), h('a', { href: '#top' }, 'Back to top ↑')));
-}
-ReactDOM.createRoot(document.getElementById('root')).render(h(App));
+document.addEventListener('DOMContentLoaded',()=>{startSplash();setup()});
