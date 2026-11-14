@@ -1,0 +1,87 @@
+# llms.txt — Arkar Yan
+
+> This file provides a plain-text summary of the website for AI language models and search engines.
+
+## Site
+- **Name:** Arkar Yan
+- **URL:** https://arkaryan.net/
+- **Language:** English (en)
+- **Based in:** Yangon, Myanmar
+
+## Person
+- **Name:** Arkar Yan
+- **Role:** Full-Stack Engineer, Educator & Founder
+- **Email:** info@arkaryan.net
+- **Phone:** +95 975 843 0371
+- **GitHub:** https://github.com/hidecard
+- **Telegram:** https://t.me/hidecard1
+
+## About
+Arkar Yan is a full-stack developer and instructor who turns complex problems into clear, dependable digital products. He cares about the details people feel: a fast interface, a thoughtful flow and technology that stays out of the way.
+
+## Experience
+- 2024 — Present: Programming Instructor & Project Manager, YHA Computer (Yangon, Myanmar). Teaching full-stack web & mobile; 500+ students, 12+ projects shipped, 8 concurrent clients.
+- 2020 — Present: Cybersecurity Consultant, Myanmar Cyber Ghost (Yangon, Myanmar). Security audits, curriculum design, incident response guidance.
+- 2019 — Present: Founder & CEO, k Square (Yangon, Myanmar). Custom enterprise solutions and SaaS architecture.
+- 2017 — Present: Independent Software Developer, Freelance (Yangon, Myanmar). 10+ years building, 200+ projects shipped, 14.3k students taught.
+
+## Impact
+- 10+ years building digital products
+- 200+ projects shipped
+- 14.3k students taught
+- 130+ production student projects
+- 8 concurrent client projects managed
+
+## Services
+1. Product engineering (4–12 weeks) — Startups and product teams. Full lifecycle discovery to launch; responsive web/mobile frontends; API design, databases, production deployment. Stack: TypeScript, React, Laravel, Rust, Flutter.
+2. Web & mobile apps (6–16 weeks) — Businesses needing web + mobile. React/Laravel/Inertia.js web apps, Flutter cross-platform mobile, native Android Java/OpenVPN.
+3. AI & automation (3–8 weeks) — Teams adding practical AI. Gemini AI integrations, Wasmtime AI-code sandboxing, routing/recommendation/voice-alert features.
+4. Teaching & mentoring (ongoing) — Students and junior developers. Full-stack bootcamps, 1-on-1 code reviews, cybersecurity labs.
+
+## Skills & Technologies
+
+### 1. Programming Languages & Core Tech
+**Languages:** JavaScript, TypeScript, PHP, Python, C#, Rust, Dart, Java, HTML/CSS
+**Development & Frameworks:** Next.js, React.js, Vue.js, Node.js, Express.js, Laravel, Inertia.js, Flutter & Dart, OneKit (Custom JS Library)
+**Databases & ORM:** MongoDB, MySQL, Turso LibSQL, Prisma, Drizzle ORM, SQLite
+
+### 2. System Administration, DevOps & Tools
+**Operating Systems & Environment:** Linux (Ubuntu, Parrot OS Security Edition), Windows (UEFI boot, Advanced configuration)
+**Serverless & Cloud Edge:** Vercel, Hostinger, Cloudflare Workers
+**Version Control & Package Managers:** Git, GitHub, pnpm, npm Publishing
+
+### 3. Cybersecurity & Ethical Hacking
+**Security Tools:** Burp Suite, Nmap, Proxychains, UFW, Wireshark, Wasmtime (WASM Sandbox isolation)
+**Network & Security Foundation:** Network Engineering, CCNA, Linux System Administration, Vulnerability Research
+
+### 4. Mobile & Cross-Platform Development
+**Mobile Apps:** Flutter (Android/iOS), Native Android (Java)
+**Hardware & Protocols Integration:** NFC Card Reading (APDU ISO 7816 protocols), POS Integration, Push notifications (Pusher)
+
+### 5. Teaching, Management & Content Creation
+**Instruction & Project Management:** Full-stack Web & Mobile Development teaching, Curriculum design, Student mentoring (YHA Computer & Freelance)
+**Creative & Design:** Graphic Design, Motion Video Editing, Social Media Page Management
+**Publishing:** Technical Writing (Authored "Flutter: From Basic to Advance" book), VS Code Extensions Development
+
+## Selected Projects
+- ZAP Lang — A fast, expressive programming language and developer tool with Rust runtime (Self-hosting compiler, 10k+ loc compiled)
+- CortexEnv — A secure execution sandbox and Rust workspace for AI-generated code (Wasmtime sandboxing)
+- YBS AI — Intelligent bus route guide for Yangon with offline maps and Burmese voice TTS (100+ routes)
+- WeCare — Charitable web app for underprivileged street elders in Myanmar (transparent donations)
+- SmartZay — SaaS e-commerce marketplace with POS integration and P2P chat
+- MM Match — Telegram dating bot with swipe functionality
+- MM Career AI — Career guidance platform for Myanmar professionals (AI job matching)
+- DWMBlurGlass — Open-source Windows blur/Aero-glass utility (C++, Windows API)
+- Zap VS Code Ext — Official VS Code extension for the ZAP language
+- Code Notes Manager — VS Code extension for code snippets and notes
+- OneKit Library — Lightweight JavaScript library on npm (~5k downloads)
+- CSS-Labs Playground — Flexbox/Grid learning playground
+- Solo VPN — Native Android VPN (OpenVPN, AES encryption)
+- KG English App — Gamified English learning app for kids (Flutter, SQLite)
+- Security Labs — Interactive cybersecurity learning platform (Next.js, Prisma)
+
+## Contact
+- Email: info@arkaryan.net
+- Phone: +95 975 843 0371
+- Location: Yangon, Myanmar
+- Available for thoughtful freelance collaborations.
