@@ -259,6 +259,15 @@ const experience = [
     achievements: ["Taught 500+ students across full-stack cohorts", "Shipped 130+ student projects to production", "Managed 8 concurrent client projects"],
   },
   {
+    date: "2022 — 2024",
+    role: "Founder",
+    company: "Power Agriculture Myanmar",
+    location: "Yangon, Myanmar",
+    type: "Founder",
+    desc: "Established an agricultural brand and managed the supply chain, label design, and distribution of agricultural nutrient and pest control products.",
+    achievements: ["Founded Power Agriculture brand", "Managed agricultural product supply chain", "Designed custom packaging and distribution networks"],
+  },
+  {
     date: "2020 — Present",
     role: "Cybersecurity Consultant",
     company: "Myanmar Cyber Ghost",
@@ -294,7 +303,7 @@ const skills = [
     groups: [
       {
         label: "Languages",
-        items: ["JavaScript", "TypeScript", "PHP", "Python", "C#", "Rust", "Dart", "Java", "HTML/CSS"],
+        items: ["JavaScript", "TypeScript", "PHP", "Python", "C#", "Rust", "Dart", "Java", "HTML/CSS", "SQL / Query Languages"],
       },
       {
         label: "Development & Frameworks",
@@ -316,12 +325,20 @@ const skills = [
         items: ["Linux (Ubuntu, Parrot OS Security Edition)", "Windows (UEFI boot, Advanced configuration)"],
       },
       {
+        label: "Shell Scripting & Automation",
+        items: ["Bash / Shell Scripting (bash, sh)", "System automation and server deployment scripts"],
+      },
+      {
         label: "Serverless & Cloud Edge",
         items: ["Vercel", "Hostinger", "Cloudflare Workers"],
       },
       {
-        label: "Version Control & Package Managers",
-        items: ["Git", "GitHub", "pnpm", "npm Publishing"],
+        label: "Version Control & Workflows",
+        items: ["Git & Advanced Branching Workflows", "GitHub", "pnpm / npm"],
+      },
+      {
+        label: "CI/CD & Deployment Pipelines",
+        items: ["GitHub Actions (Automated testing & building)", "Automated npm Package Publishing (onekit-js)", "VS Code Marketplace Extensions Deployment", "Vercel Continuous Deployment (CD)"],
       },
     ],
   },
@@ -370,7 +387,22 @@ const skills = [
       },
       {
         label: "Publishing",
-        items: ["Technical Writing — \"Flutter: From Basic to Advance\"", "VS Code Extensions Development"],
+        items: ['Technical Writing — "Flutter: From Basic to Advance"', "VS Code Extensions Development"],
+      },
+    ],
+  },
+  {
+    no: "6",
+    title: "Business Ventures, Supply Chain & Architecture",
+    intro: "Agricultural branding, supply chain management and software architecture.",
+    groups: [
+      {
+        label: "Business & Operations (Power Agriculture Myanmar)",
+        items: ["Agricultural Product Branding & Label Design", "Supply Chain & Distribution Management", "Agricultural Nutrient & Pest Control Packaging"],
+      },
+      {
+        label: "Natural Languages",
+        items: ["Burmese (Native)", "English"],
       },
     ],
   },

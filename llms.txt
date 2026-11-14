@@ -17,7 +17,7 @@
 - **Telegram:** https://t.me/hidecard1
 
 ## About
-Arkar Yan is a full-stack developer and instructor who turns complex problems into clear, dependable digital products. He cares about the details people feel: a fast interface, a thoughtful flow and technology that stays out of the way.
+Arkar Yan is a software architect, developer, and tech instructor based in Yangon. He specializes in building everything from scalable web platforms, custom developer tools, and mobile apps to driving successful business ventures and supply chains. He believes in writing purposeful code, designing thoughtful workflows, and building products that make a genuine impact.
 
 ## Experience
 - 2024 — Present: Programming Instructor & Project Manager, YHA Computer (Yangon, Myanmar). Teaching full-stack web & mobile; 500+ students, 12+ projects shipped, 8 concurrent clients.
@@ -41,14 +41,16 @@ Arkar Yan is a full-stack developer and instructor who turns complex problems in
 ## Skills & Technologies
 
 ### 1. Programming Languages & Core Tech
-**Languages:** JavaScript, TypeScript, PHP, Python, C#, Rust, Dart, Java, HTML/CSS
+**Languages:** JavaScript, TypeScript, PHP, Python, C#, Rust, Dart, Java, HTML/CSS, SQL / Query Languages
 **Development & Frameworks:** Next.js, React.js, Vue.js, Node.js, Express.js, Laravel, Inertia.js, Flutter & Dart, OneKit (Custom JS Library)
 **Databases & ORM:** MongoDB, MySQL, Turso LibSQL, Prisma, Drizzle ORM, SQLite
 
 ### 2. System Administration, DevOps & Tools
 **Operating Systems & Environment:** Linux (Ubuntu, Parrot OS Security Edition), Windows (UEFI boot, Advanced configuration)
+**Shell Scripting & Automation:** Bash / Shell Scripting (bash, sh), System automation and server deployment scripts
 **Serverless & Cloud Edge:** Vercel, Hostinger, Cloudflare Workers
-**Version Control & Package Managers:** Git, GitHub, pnpm, npm Publishing
+**Version Control & Workflows:** Git & Advanced Branching Workflows, GitHub, pnpm / npm
+**CI/CD & Deployment Pipelines:** GitHub Actions (Automated testing & building), Automated npm Package Publishing (onekit-js), VS Code Marketplace Extensions Deployment, Vercel Continuous Deployment (CD)
 
 ### 3. Cybersecurity & Ethical Hacking
 **Security Tools:** Burp Suite, Nmap, Proxychains, UFW, Wireshark, Wasmtime (WASM Sandbox isolation)
@@ -61,7 +63,11 @@ Arkar Yan is a full-stack developer and instructor who turns complex problems in
 ### 5. Teaching, Management & Content Creation
 **Instruction & Project Management:** Full-stack Web & Mobile Development teaching, Curriculum design, Student mentoring (YHA Computer & Freelance)
 **Creative & Design:** Graphic Design, Motion Video Editing, Social Media Page Management
-**Publishing:** Technical Writing (Authored "Flutter: From Basic to Advance" book), VS Code Extensions Development
+**Publishing:** Technical Writing — "Flutter: From Basic to Advance", VS Code Extensions Development
+
+### 6. Business Ventures, Supply Chain & Architecture
+**Business & Operations (Power Agriculture Myanmar):** Agricultural Product Branding & Label Design, Supply Chain & Distribution Management, Agricultural Nutrient & Pest Control Packaging
+**Natural Languages:** Burmese (Native), English
 
 ## Selected Projects
 - ZAP Lang — A fast, expressive programming language and developer tool with Rust runtime (Self-hosting compiler, 10k+ loc compiled)
