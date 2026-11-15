@@ -436,8 +436,18 @@ function renderFilters() {
 let activeFilter = "All",
   visibleCount = 6;
 function projectCard(p, i) {
-  const visual = p.image ? `<img src="${p.image}" alt="${p.title} illustration" loading="lazy">` : p.short;
-  return `<article class="project-card reveal" data-category="${p.category}"><span class="project-number">0${i + 1}</span><div class="project-visual" style="--project-color:${p.color}">${visual}</div><span class="project-category">${p.category}</span><h3>${p.title}</h3><div class="project-meta"><span>${p.role}</span><span>${p.period}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div><p>${p.desc}</p><div class="project-foot"><span>${p.tags.slice(0, 2).join(" Â· ")}</span><button class="text-link" data-project="${p.title}">Details â†—</button></div><div class="stack">${p.stack.map((t) => `<span>${t}</span>`).join("")}</div><div class="metrics">${p.metrics.join(" Â· ")}</div></article>`;
+  const logo = p.image ? `<img src="${p.image}" alt="${p.title} logo" loading="lazy">` : `<span class="project-fallback">${p.short}</span>`;
+  const liveLink = p.live ? `<a class="project-visit" href="${p.live}" target="_blank" rel="noreferrer">Visit ↗</a>` : "";
+  return `<article class="project-card reveal" data-category="${p.category}">
+    <div class="project-visual" style="--project-color:${p.color}"><span class="project-badge">${p.category}</span>${logo}</div>
+    <div class="project-body">
+      <div class="project-top"><span class="project-number">0${i + 1}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div>
+      <h3>${p.title}</h3>
+      <p>${p.desc}</p>
+      <div class="stack">${p.stack.slice(0,4).map((t) => `<span>${t}</span>`).join("")}</div>
+      <div class="project-foot"><button class="text-link" data-project="${p.title}">Case details</button>${liveLink}</div>
+    </div>
+  </article>`;
 }
 function renderProjects() {
   const list = projects.filter(
@@ -455,7 +465,7 @@ function renderServices() {
   $("[data-services]").innerHTML = services
     .map(
       (s) =>
-        `<article class="service-item reveal"><div class="service-left"><span class="service-number">${s.no}</span><h3>${s.title}</h3><p>${s.summary}</p><div class="service-meta"><span>${s.idealFor}</span><span>${s.timeframe}</span></div></div><div class="service-right"><ul class="service-details">${s.details.map((d) => `<li>${d}</li>`).join("")}</ul><div class="stack">${s.stack.map((t) => `<span>${t}</span>`).join("")}</div><span class="service-arrow">â†—</span></div></article>`,
+        `<article class="service-item reveal"><div class="service-left"><span class="service-number">${s.no}</span><h3>${s.title}</h3><p>${s.summary}</p><div class="service-meta"><span>${s.idealFor}</span><span>${s.timeframe}</span></div></div><div class="service-right"><ul class="service-details">${s.details.map((d) => `<li>${d}</li>`).join("")}</ul><div class="stack">${s.stack.map((t) => `<span>${t}</span>`).join("")}</div><span class="service-arrow">↗</span></div></article>`,
     )
     .join("");
 }
@@ -467,6 +477,60 @@ function renderExperience() {
     )
     .join("");
 }
+function skillIcon(name) {
+  const n = name.toLowerCase();
+  const map = [
+    ["html", "devicon-html5-plain colored"],
+    ["css", "devicon-css3-plain colored"],
+    ["javascript", "devicon-javascript-plain colored"],
+    ["typescript", "devicon-typescript-plain colored"],
+    ["php", "devicon-php-plain colored"],
+    ["python", "devicon-python-plain colored"],
+    ["c#", "devicon-csharp-plain colored"],
+    ["rust", "devicon-rust-original"],
+    ["dart", "devicon-dart-plain colored"],
+    ["java", "devicon-java-plain colored"],
+    ["react", "devicon-react-original colored"],
+    ["vue", "devicon-vuejs-plain colored"],
+    ["next.js", "devicon-nextjs-plain"],
+    ["node.js", "devicon-nodejs-plain colored"],
+    ["node", "devicon-nodejs-plain colored"],
+    ["express", "devicon-express-original"],
+    ["laravel", "devicon-laravel-original colored"],
+    ["flutter", "devicon-flutter-plain colored"],
+    ["mongodb", "devicon-mongodb-plain colored"],
+    ["mysql", "devicon-mysql-original colored"],
+    ["sqlite", "devicon-sqlite-plain colored"],
+    ["prisma", "devicon-prisma-original"],
+    ["linux", "devicon-linux-plain"],
+    ["ubuntu", "devicon-ubuntu-plain colored"],
+    ["windows", "devicon-windows11-original colored"],
+    ["git &", "devicon-git-plain colored"],
+    ["git", "devicon-git-plain colored"],
+    ["github", "devicon-github-original"],
+    ["bash", "devicon-bash-plain"],
+    ["shell", "devicon-bash-plain"],
+    ["npm", "devicon-npm-original-wordmark colored"],
+    ["pnpm", "devicon-pnpm-plain colored"],
+    ["vercel", "devicon-vercel-original"],
+    ["cloudflare", "devicon-cloudflare-plain colored"],
+    ["vite", "devicon-vitejs-plain colored"],
+    ["tailwind", "devicon-tailwindcss-original colored"],
+    ["postgres", "devicon-postgresql-plain colored"],
+    ["sql", "devicon-azuresqldatabase-plain colored"],
+    ["android", "devicon-android-plain colored"],
+    ["wasmtime", "devicon-wasm-original colored"],
+    ["webassembly", "devicon-wasm-original colored"],
+  ];
+  let cls = "";
+  for (const [key, val] of map) {
+    if (n.includes(key)) { cls = val; break; }
+  }
+  if (cls) return `<i class="${cls}" aria-hidden="true"></i>`;
+  const label = name.replace(/[^A-Za-z0-9+#]/g, "").slice(0, 2).toUpperCase() || "?";
+  return `<span class="skill-fallback" aria-hidden="true">${label}</span>`;
+}
+
 function renderSkills() {
   $("[data-skills]").innerHTML = skills
     .map(
@@ -474,7 +538,7 @@ function renderSkills() {
         `<section class="skill-group reveal" id="skill-${s.no}"><div class="skill-head"><span class="skill-number">0${s.no}</span><h3>${s.title}</h3></div><p class="skill-intro">${s.intro}</p><div class="skill-cols">${s.groups
           .map(
             (g) =>
-              `<div class="skill-column"><span class="skill-column-label">${g.label}</span><ul class="skill-list">${g.items.map((i) => `<li>${i}</li>`).join("")}</ul></div>`,
+              `<div class="skill-column"><span class="skill-column-label">${g.label}</span><ul class="skill-list">${g.items.map((i) => `<li class="skill-chip"><span class="skill-icon">${skillIcon(i)}</span><span class="skill-name">${i}</span></li>`).join("")}</ul></div>`,
           )
           .join("")}</div></section>`,
     )
@@ -537,7 +601,7 @@ function openProject(title) {
   if (!p) return;
   const modal = $("[data-modal]");
   $("[data-modal-content]").innerHTML =
-    `<p class="modal-kicker">${p.category}</p><h2>${p.title}</h2><div class="project-meta" style="margin:16px 0 10px"><span>${p.role}</span><span>${p.period}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div><p>${p.desc}</p><div class="modal-metrics">${p.metrics.map((m) => `<span class="metric">${m}</span>`).join("")}</div><div class="modal-tags">${[...p.tags, ...p.stack].map((t) => `<span>${t}</span>`).join("")}</div>${p.live ? `<a class="button button-accent" href="${p.live}" target="_blank" rel="noreferrer" style="margin-top:28px">Open live project <span>â†—</span></a>` : ""}`;
+    `<p class="modal-kicker">${p.category}</p><h2>${p.title}</h2><div class="project-meta" style="margin:16px 0 10px"><span>${p.role}</span><span>${p.period}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div><p>${p.desc}</p><div class="modal-metrics">${p.metrics.map((m) => `<span class="metric">${m}</span>`).join("")}</div><div class="modal-tags">${[...p.tags, ...p.stack].map((t) => `<span>${t}</span>`).join("")}</div>${p.live ? `<a class="button button-accent" href="${p.live}" target="_blank" rel="noreferrer" style="margin-top:28px">Open live project <span>↗</span></a>` : ""}`;
   modal.showModal();
 }
 function setup() {
