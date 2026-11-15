@@ -318,15 +318,15 @@ const skills = [
     groups: [
       {
         label: "Languages",
-        items: ["JavaScript", "TypeScript", "PHP", "Python", "C#", "Rust", "Dart", "Java", "HTML/CSS", "SQL / Query Languages"],
+        items: ["JavaScript", "TypeScript", "PHP", "Python", "C#", "Rust", "Dart", "Java", "ZAP", "SQL / Query Languages"],
       },
       {
         label: "Development & Frameworks",
-        items: ["Next.js", "React.js", "Vue.js", "Node.js", "Express.js", "Laravel", "Inertia.js", "Flutter & Dart", "OneKit (Custom JS Library)"],
+        items: ["Next.js", "React.js", "Vue.js", "Node.js", "Express.js", "Laravel", "Inertia.js", "Flutter & Dart", "Bootstrap", "Tailwind CSS", "OneKit (Custom JS Library)"],
       },
       {
         label: "Databases & ORM",
-        items: ["MongoDB", "MySQL", "Turso LibSQL", "Prisma", "Drizzle ORM", "SQLite"],
+        items: ["MongoDB", "MySQL", "Turso LibSQL", "Supabase", "Firebase", "Prisma", "Drizzle ORM", "SQLite"],
       },
     ],
   },
@@ -345,7 +345,7 @@ const skills = [
       },
       {
         label: "Serverless & Cloud Edge",
-        items: ["Vercel", "Hostinger", "Cloudflare Workers"],
+        items: ["AWS", "Vercel", "Hostinger", "Cloudflare Workers"],
       },
       {
         label: "Version Control & Workflows",
@@ -353,7 +353,7 @@ const skills = [
       },
       {
         label: "CI/CD & Deployment Pipelines",
-        items: ["GitHub Actions (Automated testing & building)", "Automated npm Package Publishing (onekit-js)", "VS Code Marketplace Extensions Deployment", "Vercel Continuous Deployment (CD)"],
+        items: ["Docker", "GitHub Actions (Automated testing & building)", "Automated npm Package Publishing (onekit-js)", "VS Code Marketplace Extensions Deployment", "Vercel Continuous Deployment (CD)"],
       },
     ],
   },
@@ -398,11 +398,11 @@ const skills = [
       },
       {
         label: "Creative & Design",
-        items: ["Graphic Design", "Motion Video Editing", "Social Media Page Management"],
+        items: ["Figma", "Adobe XD", "Graphic Design", "Motion Video Editing", "Social Media Page Management"],
       },
       {
         label: "Publishing",
-        items: ['Technical Writing â€” "Flutter: From Basic to Advance"', "VS Code Extensions Development"],
+        items: ['Technical Writing” "Flutter: From Basic to Advance"', "VS Code Extensions Development"],
       },
     ],
   },
@@ -514,6 +514,15 @@ function skillIcon(name) {
     ["pnpm", "devicon-pnpm-plain colored"],
     ["vercel", "devicon-vercel-original"],
     ["cloudflare", "devicon-cloudflare-plain colored"],
+    ["docker", "devicon-docker-plain colored"],
+    ["aws", "devicon-amazonwebservices-plain-wordmark colored"],
+    ["amazon", "devicon-amazonwebservices-plain-wordmark colored"],
+    ["figma", "devicon-figma-plain colored"],
+    ["adobe xd", "devicon-xd-plain colored"],
+    ["xd", "devicon-xd-plain colored"],
+    ["supabase", "devicon-supabase-plain colored"],
+    ["firebase", "devicon-firebase-plain colored"],
+    ["bootstrap", "devicon-bootstrap-plain colored"],
     ["vite", "devicon-vitejs-plain colored"],
     ["tailwind", "devicon-tailwindcss-original colored"],
     ["postgres", "devicon-postgresql-plain colored"],
@@ -535,12 +544,31 @@ function renderSkills() {
   $("[data-skills]").innerHTML = skills
     .map(
       (s) =>
-        `<section class="skill-group reveal" id="skill-${s.no}"><div class="skill-head"><span class="skill-number">0${s.no}</span><h3>${s.title}</h3></div><p class="skill-intro">${s.intro}</p><div class="skill-cols">${s.groups
-          .map(
-            (g) =>
-              `<div class="skill-column"><span class="skill-column-label">${g.label}</span><ul class="skill-list">${g.items.map((i) => `<li class="skill-chip"><span class="skill-icon">${skillIcon(i)}</span><span class="skill-name">${i}</span></li>`).join("")}</ul></div>`,
-          )
-          .join("")}</div></section>`,
+        `<section class="skill-group reveal" id="skill-${s.no}">
+          <div class="skill-head">
+            <span class="skill-number">0${s.no}</span>
+            <div class="skill-head-copy">
+              <h3>${s.title}</h3>
+              <p class="skill-intro">${s.intro}</p>
+            </div>
+          </div>
+          <div class="skill-cols">
+            ${s.groups
+              .map(
+                (g) =>
+                  `<div class="skill-column">
+                    <span class="skill-column-label">${g.label}</span>
+                    <ul class="skill-list">${g.items
+                      .map(
+                        (i) =>
+                          `<li class="skill-item"><span class="skill-icon">${skillIcon(i)}</span><span class="skill-name">${i}</span></li>`,
+                      )
+                      .join("")}</ul>
+                  </div>`,
+              )
+              .join("")}
+          </div>
+        </section>`,
     )
     .join("");
 }
