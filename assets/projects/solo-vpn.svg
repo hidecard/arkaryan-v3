@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#1f6076"/><stop offset="1" stop-color="#07161d"/></linearGradient>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(160 80) rotate(90) scale(70)"><stop stop-color="#67e8f9" stop-opacity=".25"/><stop offset="1" stop-color="#67e8f9" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <circle cx="160" cy="80" r="70" fill="url(#g)"/>
+  <path d="M160 22c50 0 80 24 80 24s-8 70-80 96c-72-26-80-96-80-96s30-24 80-24z" fill="#22d3ee" fill-opacity=".12" stroke="#a5f3fc" stroke-width="4.5"/>
+  <rect x="132" y="76" width="56" height="40" rx="10" fill="#062733" stroke="#cffafe" stroke-width="4"/>
+  <path d="M144 76v-12a16 16 0 1 1 32 0v12" stroke="#cffafe" stroke-width="4.5"/>
+  <circle cx="160" cy="96" r="4.5" fill="#ecfeff"/><path d="M160 100v8" stroke="#ecfeff" stroke-width="4" stroke-linecap="round"/>
+  <text x="28" y="158" fill="#effeff" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">Solo VPN</text>
+  <text x="28" y="172" fill="#bff7ff" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">PRIVATE · ENCRYPTED</text>
+</svg>

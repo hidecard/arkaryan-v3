@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#664a17"/><stop offset="1" stop-color="#1b1306"/></linearGradient>
+    <linearGradient id="route" x1="30" y1="100" x2="290" y2="60" gradientUnits="userSpaceOnUse"><stop stop-color="#ffd77e"/><stop offset="1" stop-color="#fff1c2"/></linearGradient>
+    <radialGradient id="sun" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 28) rotate(90) scale(70)"><stop stop-color="#ffd77e" stop-opacity=".45"/><stop offset="1" stop-color="#ffd77e" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <circle cx="260" cy="28" r="70" fill="url(#sun)"/>
+  <path d="M-10 130c40-26 78-26 118 0s78 26 118 0 58-26 104 0v50H-10z" fill="#f4b544" fill-opacity=".12"/>
+  <path d="M28 104c32 0 38-40 74-40s40 54 74 54 34-22 58-22 36 20 58 20" stroke="url(#route)" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#1a1308" stroke="#ffe8a6" stroke-width="3"><circle cx="102" cy="64" r="13"/><circle cx="176" cy="118" r="13"/><circle cx="234" cy="96" r="13"/><circle cx="292" cy="116" r="10"/></g>
+  <g stroke="#fff4d6" stroke-width="2.5" stroke-linecap="round"><path d="M102 58v12M96 64h12"/><path d="M176 112v12M170 118h12"/><path d="M234 90v12M228 96h12"/></g>
+  <rect x="34" y="28" width="84" height="34" rx="10" fill="#120c04" fill-opacity=".45" stroke="#ffd77e" stroke-opacity=".4"/><text x="48" y="49" fill="#fff4d6" font-family="ui-monospace,monospace" font-size="10">BUS · NFC · AI</text>
+  <text x="28" y="158" fill="#fff9eb" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">YBS AI</text>
+  <text x="28" y="172" fill="#ffe4a8" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">ROUTE GUIDE</text>
+</svg>

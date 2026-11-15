@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#785316"/><stop offset="1" stop-color="#201405"/></linearGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <g><rect x="66" y="40" width="68" height="68" rx="18" fill="#fbbf24" fill-opacity=".14" stroke="#fde68a" stroke-width="4"/>
+  <rect x="126" y="72" width="68" height="68" rx="18" fill="#fbbf24" fill-opacity=".28" stroke="#fde68a" stroke-width="4"/>
+  <rect x="186" y="40" width="68" height="68" rx="18" fill="#fbbf24" fill-opacity=".14" stroke="#fde68a" stroke-width="4"/></g>
+  <path d="M98 74l-12 12 12 12M222 74l12 12-12 12M152 106h16M160 98v16" stroke="#fff8dd" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="28" y="158" fill="#fff9e8" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">OneKit Library</text>
+  <text x="28" y="172" fill="#fde68a" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">NPM · UTILITIES</text>
+</svg>

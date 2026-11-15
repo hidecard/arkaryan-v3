@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#6b3f21"/><stop offset="1" stop-color="#1b1008"/></linearGradient>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(260 30) rotate(90) scale(80)"><stop stop-color="#ffb35c" stop-opacity=".4"/><stop offset="1" stop-color="#ffb35c" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <circle cx="260" cy="30" r="80" fill="url(#g)"/>
+  <g opacity=".9"><rect x="34" y="28" width="76" height="48" rx="12" fill="#fff3e4" fill-opacity=".08" stroke="#ffc27a" stroke-opacity=".4"/><rect x="118" y="28" width="76" height="48" rx="12" fill="#fff3e4" fill-opacity=".06" stroke="#ffc27a" stroke-opacity=".3"/><rect x="202" y="28" width="84" height="48" rx="12" fill="#fff3e4" fill-opacity=".08" stroke="#ffc27a" stroke-opacity=".35"/></g>
+  <path d="M50 48h22M50 60h14M134 48h22M134 60h14M218 48h28M218 60h18" stroke="#ffe4c2" stroke-width="4" stroke-linecap="round"/>
+  <path d="M44 108h34l16 38h116l20-50H110" stroke="#ffc27a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="122" cy="154" r="9" fill="#ffe4c2"/><circle cx="192" cy="154" r="9" fill="#ffe4c2"/>
+  <rect x="210" y="92" width="30" height="18" rx="6" fill="#ff9f43" fill-opacity=".25" stroke="#ffd39b"/>
+  <text x="28" y="158" fill="#fff6ec" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">SmartZay</text>
+  <text x="28" y="172" fill="#ffd39b" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">MARKETPLACE · POS</text>
+</svg>

@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#652f39"/><stop offset="1" stop-color="#180b0f"/></linearGradient>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(250 34) rotate(90) scale(80)"><stop stop-color="#fb7185" stop-opacity=".3"/><stop offset="1" stop-color="#fb7185" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <circle cx="250" cy="34" r="80" fill="url(#g)"/>
+  <path d="M122 36h76l-12 46a30 30 0 0 1 16 26c0 20-19 36-42 36s-42-16-42-36c0-11 6-20 16-26l-12-46z" fill="#fb7185" fill-opacity=".14" stroke="#fecdd3" stroke-width="4.5"/>
+  <path d="M144 110h32" stroke="#fff1f2" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="146" cy="92" r="5.5" fill="#fff1f2"/><circle cx="174" cy="80" r="5.5" fill="#fff1f2"/><circle cx="160" cy="122" r="6.5" fill="#fff1f2"/>
+  <rect x="42" y="126" width="236" height="10" rx="5" fill="#fda4af" fill-opacity=".18"/>
+  <text x="28" y="158" fill="#fff3f4" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">Security Labs</text>
+  <text x="28" y="172" fill="#fecdd3" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">PRACTICE · DEFENSE</text>
+</svg>

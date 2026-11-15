@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#2d6048"/><stop offset="1" stop-color="#0b1812"/></linearGradient>
+    <linearGradient id="bars" x1="0" y1="140" x2="0" y2="40" gradientUnits="userSpaceOnUse"><stop stop-color="#7ee787" stop-opacity=".25"/><stop offset="1" stop-color="#c9ffd0"/></linearGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <path d="M40 136h240" stroke="#bff4c8" stroke-opacity=".18" stroke-width="4"/>
+  <rect x="54" y="98" width="44" height="38" rx="10" fill="url(#bars)" stroke="#9ff0ad"/>
+  <rect x="110" y="78" width="44" height="58" rx="10" fill="url(#bars)" stroke="#9ff0ad"/>
+  <rect x="166" y="56" width="44" height="80" rx="10" fill="url(#bars)" stroke="#9ff0ad"/>
+  <rect x="222" y="38" width="44" height="98" rx="10" fill="url(#bars)" stroke="#9ff0ad"/>
+  <path d="M76 86l44-24 28 14 56-38 40 12" stroke="#f1fff3" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="244" cy="50" r="7" fill="#f1fff3"/>
+  <text x="28" y="158" fill="#f2fff5" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">MM Career AI</text>
+  <text x="28" y="172" fill="#bff4c8" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">SKILLS · MATCHING</text>
+</svg>

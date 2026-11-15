@@ -1,0 +1,12 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#244f6b"/><stop offset="1" stop-color="#09151d"/></linearGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <rect x="66" y="30" width="90" height="112" rx="14" fill="#60a5fa" fill-opacity=".12" stroke="#a7d0ff"/>
+  <rect x="164" y="30" width="90" height="112" rx="14" fill="#60a5fa" fill-opacity=".2" stroke="#a7d0ff"/>
+  <path d="M84 56h54M84 74h36M84 92h46M84 110h28M182 56h54M182 74h36M182 92h46M182 110h28" stroke="#eef7ff" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="160" cy="86" r="18" fill="#0b1822" stroke="#bfdbfe"/><path d="M152 86h16M160 78v16" stroke="#dbeafe" stroke-width="4" stroke-linecap="round"/>
+  <text x="28" y="158" fill="#f3f9ff" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">Code Notes Manager</text>
+  <text x="28" y="172" fill="#bfdbfe" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">SNIPPETS · DOCS</text>
+</svg>

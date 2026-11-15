@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#652a46"/><stop offset="1" stop-color="#1a0a12"/></linearGradient>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(80 30) rotate(90) scale(90)"><stop stop-color="#ff8fbd" stop-opacity=".35"/><stop offset="1" stop-color="#ff8fbd" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <circle cx="80" cy="30" r="90" fill="url(#g)"/>
+  <rect x="74" y="34" width="76" height="104" rx="18" fill="#fff0f7" fill-opacity=".06" stroke="#ffc1dd" stroke-opacity=".55" transform="rotate(-7 112 86)"/>
+  <rect x="170" y="34" width="76" height="104" rx="18" fill="#fff0f7" fill-opacity=".09" stroke="#ffc1dd" stroke-opacity=".7" transform="rotate(7 208 86)"/>
+  <path d="M160 70c-9-12-30-9-30 10 0 18 30 34 30 34s30-16 30-34c0-19-21-22-30-10z" fill="#ff7eb6"/>
+  <path d="M60 132c10-8 20-8 30 0s20 8 30 0 20-8 30 0 20 8 30 0 20-8 30 0 20 8 30 0" stroke="#ffc1dd" stroke-opacity=".45" stroke-width="5" stroke-linecap="round"/>
+  <text x="28" y="158" fill="#fff4fa" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">MM Match</text>
+  <text x="28" y="172" fill="#ffc1dd" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">TELEGRAM BOT</text>
+</svg>

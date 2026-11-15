@@ -1,0 +1,16 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#1f4658"/><stop offset="1" stop-color="#081319"/></linearGradient>
+    <linearGradient id="shield" x1="160" y1="28" x2="160" y2="150" gradientUnits="userSpaceOnUse"><stop stop-color="#8fe3ff" stop-opacity=".35"/><stop offset="1" stop-color="#3aaed8" stop-opacity=".08"/></linearGradient>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(250 30) rotate(90) scale(80)"><stop stop-color="#67d4ff" stop-opacity=".35"/><stop offset="1" stop-color="#67d4ff" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <circle cx="250" cy="30" r="80" fill="url(#g)"/>
+  <g opacity=".14" stroke="#bfefff"><circle cx="160" cy="86" r="34"/><circle cx="160" cy="86" r="54"/><circle cx="160" cy="86" r="74"/></g>
+  <path d="M160 24l58 24v38c0 38-24 62-58 76-34-14-58-38-58-76V48l58-24z" fill="url(#shield)" stroke="#aeeaff" stroke-width="4"/>
+  <path d="M132 88l20 20 38-42" stroke="#f2fdff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="28" y="34" width="56" height="26" rx="8" fill="#071018" fill-opacity=".45" stroke="#8fdfff" stroke-opacity=".35"/><text x="40" y="51" fill="#dff7ff" font-family="ui-monospace,monospace" font-size="10">WASM</text>
+  <rect x="236" y="120" width="56" height="26" rx="8" fill="#071018" fill-opacity=".45" stroke="#8fdfff" stroke-opacity=".35"/><text x="247" y="137" fill="#dff7ff" font-family="ui-monospace,monospace" font-size="10">SAFE</text>
+  <text x="28" y="158" fill="#f3fcff" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">CortexEnv</text>
+  <text x="28" y="172" fill="#bfefff" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">SANDBOX · SECURITY</text>
+</svg>

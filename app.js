@@ -1,10 +1,11 @@
-const projects = [
+﻿const projects = [
   {
     title: "ZAP Lang",
     category: "Developer tools",
     short: "ZAP",
+    image: "assets/projects/zap-lang.svg",
     role: "Creator & Lead Engineer",
-    period: "2023 — Present",
+    period: "2023 â€” Present",
     desc: "A fast, expressive programming language and developer tool with a Rust runtime, dynamic typing and a self-hosting compiler toolchain.",
     metrics: ["Self-hosting compiler", "10k+ lines compiled", "VS Code extension"],
     stack: ["Rust", "Compiler", "CLI", "TypeScript"],
@@ -17,8 +18,9 @@ const projects = [
     title: "CortexEnv",
     category: "Security / AI",
     short: "CORTEX",
+    image: "assets/projects/cortexenv.svg",
     role: "Creator & Lead Engineer",
-    period: "2024 — Present",
+    period: "2024 â€” Present",
     desc: "A secure execution sandbox and Rust workspace for AI-generated code featuring Wasmtime WASM isolation and resource limits.",
     metrics: ["Wasmtime sandboxing", "CPU & memory limits", "AI-code safe execution"],
     stack: ["Rust", "Wasmtime", "WebAssembly", "Security"],
@@ -31,8 +33,9 @@ const projects = [
     title: "YBS AI",
     category: "AI / Product",
     short: "YBS",
+    image: "assets/projects/ybs-ai.svg",
     role: "Founder & Lead Developer",
-    period: "2023 — Present",
+    period: "2023 â€” Present",
     desc: "An intelligent bus route guide for Yangon with offline functionality, NFC card reading, BFS routing and Burmese voice alerts.",
     metrics: ["100+ bus routes", "Offline maps", "Burmese voice TTS"],
     stack: ["Flutter", "Dart", "Gemini AI", "SQLite"],
@@ -45,8 +48,9 @@ const projects = [
     title: "WeCare",
     category: "Social / Web",
     short: "CARE",
+    image: "assets/projects/wecare.svg",
     role: "Full-Stack Developer",
-    period: "2022 — 2023",
+    period: "2022 â€” 2023",
     desc: "A charitable web application built for supporting underprivileged street elders in Myanmar with transparent financial tracking.",
     metrics: ["Transparent donations", "Elder profiles", "Myanmar-based"],
     stack: ["Laravel", "React", "MySQL", "Tailwind"],
@@ -59,8 +63,9 @@ const projects = [
     title: "SmartZay",
     category: "E-Commerce",
     short: "ZAY",
+    image: "assets/projects/smartzay.svg",
     role: "Full-Stack Developer",
-    period: "2022 — 2023",
+    period: "2022 â€” 2023",
     desc: "A SaaS e-commerce marketplace platform for sellers and buyers featuring custom product attributes, POS integration and P2P chat.",
     metrics: ["Seller & buyer dashboards", "POS integration", "P2P chat"],
     stack: ["Laravel", "Inertia.js", "MySQL", "Vue"],
@@ -73,8 +78,9 @@ const projects = [
     title: "MM Match",
     category: "Bot / Platform",
     short: "MM",
+    image: "assets/projects/mm-match.svg",
     role: "Creator & Backend Engineer",
-    period: "2022 — Present",
+    period: "2022 â€” Present",
     desc: "A Telegram dating bot with swipe functionality, built for reliable scale and a playful user experience.",
     metrics: ["Telegram bot API", "Swipe matching", "Profile chat"],
     stack: ["Node.js", "Telegram", "Turso", "SQLite"],
@@ -87,8 +93,9 @@ const projects = [
     title: "MM Career AI",
     category: "AI / Product",
     short: "CAREER",
+    image: "assets/projects/mm-career-ai.svg",
     role: "Founder & AI Engineer",
-    period: "2024 — Present",
+    period: "2024 â€” Present",
     desc: "A career guidance platform for Myanmar professionals with skill assessment, job matching and learning roadmaps.",
     metrics: ["Skill assessment", "AI job matching", "Learning roadmaps"],
     stack: ["TypeScript", "AI", "Vite", "Tailwind"],
@@ -101,8 +108,9 @@ const projects = [
     title: "DWMBlurGlass",
     category: "Utility",
     short: "GLASS",
+    image: "assets/projects/dwmblurglass.svg",
     role: "Creator & Maintainer",
-    period: "2024 — Present",
+    period: "2024 â€” Present",
     desc: "An open-source Windows utility bringing customizable blur effects and a modern take on classic Aero glass.",
     metrics: ["Windows 10/11", "Custom blur", "Open source"],
     stack: ["C++", "Windows API", "Win32"],
@@ -115,8 +123,9 @@ const projects = [
     title: "Zap VS Code Ext",
     category: "Developer tools",
     short: "ZAP-EX",
+    image: "assets/projects/zap-vscode-ext.svg",
     role: "Creator & Maintainer",
-    period: "2023 — Present",
+    period: "2023 â€” Present",
     desc: "Official Visual Studio Code syntax highlighting and language extension for the ZAP programming language.",
     metrics: ["Syntax highlighting", "Language features", "VS Code marketplace"],
     stack: ["TypeScript", "VS Code API", "tmLanguage"],
@@ -129,8 +138,9 @@ const projects = [
     title: "Code Notes Manager",
     category: "Utility",
     short: "NOTES",
+    image: "assets/projects/code-notes-manager.svg",
     role: "Creator & Maintainer",
-    period: "2023 — Present",
+    period: "2023 â€” Present",
     desc: "A developer-focused VS Code extension for organizing code snippets, learning notes and documentation.",
     metrics: ["Snippet manager", "Note linking", "VS Code extension"],
     stack: ["TypeScript", "VS Code API"],
@@ -143,8 +153,9 @@ const projects = [
     title: "OneKit Library",
     category: "Library",
     short: "ONE",
+    image: "assets/projects/onekit-library.svg",
     role: "Creator & Maintainer",
-    period: "2022 — Present",
+    period: "2022 â€” Present",
     desc: "A lightweight JavaScript library published on npm for DOM manipulation, animation, reactive state and routing.",
     metrics: ["npm published", "~5k downloads", "ES modules"],
     stack: ["JavaScript", "ES Modules", "DOM"],
@@ -157,8 +168,9 @@ const projects = [
     title: "CSS-Labs Playground",
     category: "Tool",
     short: "CSS",
+    image: "assets/projects/css-labs-playground.svg",
     role: "Creator & Educator",
-    period: "2022 — Present",
+    period: "2022 â€” Present",
     desc: "A live playground for learning Flexbox and Grid with preview, code generation and practical experiments.",
     metrics: ["Flexbox & Grid", "Live preview", "Code generation"],
     stack: ["React", "CSS", "Education"],
@@ -171,8 +183,9 @@ const projects = [
     title: "Solo VPN",
     category: "Mobile",
     short: "VPN",
+    image: "assets/projects/solo-vpn.svg",
     role: "Android Developer",
-    period: "2021 — 2022",
+    period: "2021 â€” 2022",
     desc: "A native Android VPN application focused on secure protocols, encryption and high-performance connectivity.",
     metrics: ["OpenVPN protocol", "AES encryption", "Native Android"],
     stack: ["Java", "OpenVPN", "Android SDK"],
@@ -185,8 +198,9 @@ const projects = [
     title: "KG English App",
     category: "Mobile",
     short: "KG",
+    image: "assets/projects/kg-english-app.svg",
     role: "Mobile Developer",
-    period: "2021 — 2022",
+    period: "2021 â€” 2022",
     desc: "A gamified English learning app for young students with audio, animation and approachable lessons.",
     metrics: ["Kids gamification", "Audio lessons", "SQLite offline"],
     stack: ["Flutter", "Dart", "SQLite"],
@@ -199,8 +213,9 @@ const projects = [
     title: "Security Labs",
     category: "Education",
     short: "LABS",
+    image: "assets/projects/security-labs.svg",
     role: "Founder & Instructor",
-    period: "2020 — Present",
+    period: "2020 â€” Present",
     desc: "An interactive cybersecurity learning platform designed around practical labs and curated resources.",
     metrics: ["Hands-on labs", "Curated resources", "Security curriculum"],
     stack: ["Next.js", "Prisma", "Security", "PostgreSQL"],
@@ -215,10 +230,10 @@ const services = [
     no: "01",
     title: "Product engineering",
     summary: "From a clear brief to a dependable, responsive product that is ready to ship.",
-    details: ["Full product lifecycle — discovery, design, build and launch", "Responsive web and mobile frontends", "API design, databases and production deployment"],
+    details: ["Full product lifecycle â€” discovery, design, build and launch", "Responsive web and mobile frontends", "API design, databases and production deployment"],
     stack: ["TypeScript", "React", "Laravel", "Rust", "Flutter"],
     idealFor: "Startups and product teams",
-    timeframe: "4–12 weeks",
+    timeframe: "4â€“12 weeks",
   },
   {
     no: "02",
@@ -227,7 +242,7 @@ const services = [
     details: ["Custom web applications (React, Laravel, Inertia.js)", "Flutter cross-platform mobile apps", "Native Android (Java, OpenVPN)"],
     stack: ["React", "Flutter", "Dart", "Java", "Laravel"],
     idealFor: "Businesses needing web + mobile",
-    timeframe: "6–16 weeks",
+    timeframe: "6â€“16 weeks",
   },
   {
     no: "03",
@@ -236,7 +251,7 @@ const services = [
     details: ["Gemini AI integrations and assistants", "AI-generated code sandboxing (Wasmtime)", "Routing, recommendation and voice-alert features"],
     stack: ["Gemini AI", "TypeScript", "Rust", "Wasmtime"],
     idealFor: "Teams adding practical AI",
-    timeframe: "3–8 weeks",
+    timeframe: "3â€“8 weeks",
   },
   {
     no: "04",
@@ -250,7 +265,7 @@ const services = [
 ];
 const experience = [
   {
-    date: "2024 — Present",
+    date: "2024 â€” Present",
     role: "Programming Instructor & Project Manager",
     company: "YHA Computer",
     location: "Yangon, Myanmar",
@@ -259,7 +274,7 @@ const experience = [
     achievements: ["Taught 500+ students across full-stack cohorts", "Shipped 130+ student projects to production", "Managed 8 concurrent client projects"],
   },
   {
-    date: "2022 — 2024",
+    date: "2022 â€” 2024",
     role: "Founder",
     company: "Power Agriculture Myanmar",
     location: "Yangon, Myanmar",
@@ -268,7 +283,7 @@ const experience = [
     achievements: ["Founded Power Agriculture brand", "Managed agricultural product supply chain", "Designed custom packaging and distribution networks"],
   },
   {
-    date: "2020 — Present",
+    date: "2020 â€” Present",
     role: "Cybersecurity Consultant",
     company: "Myanmar Cyber Ghost",
     location: "Yangon, Myanmar",
@@ -277,7 +292,7 @@ const experience = [
     achievements: ["Security audits for local businesses", "Cybersecurity curriculum design", "Incident response guidance"],
   },
   {
-    date: "2019 — Present",
+    date: "2019 â€” Present",
     role: "Founder & CEO",
     company: "k Square",
     location: "Yangon, Myanmar",
@@ -286,7 +301,7 @@ const experience = [
     achievements: ["Founded k Square software firm", "Custom enterprise SaaS deliveries", "Team leadership and client relations"],
   },
   {
-    date: "2017 — Present",
+    date: "2017 â€” Present",
     role: "Independent Software Developer",
     company: "Freelance",
     location: "Yangon, Myanmar",
@@ -387,7 +402,7 @@ const skills = [
       },
       {
         label: "Publishing",
-        items: ['Technical Writing — "Flutter: From Basic to Advance"', "VS Code Extensions Development"],
+        items: ['Technical Writing â€” "Flutter: From Basic to Advance"', "VS Code Extensions Development"],
       },
     ],
   },
@@ -421,7 +436,8 @@ function renderFilters() {
 let activeFilter = "All",
   visibleCount = 6;
 function projectCard(p, i) {
-  return `<article class="project-card reveal" data-category="${p.category}"><span class="project-number">0${i + 1}</span><div class="project-visual" style="--project-color:${p.color}">${p.short}</div><span class="project-category">${p.category}</span><h3>${p.title}</h3><div class="project-meta"><span>${p.role}</span><span>${p.period}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div><p>${p.desc}</p><div class="project-foot"><span>${p.tags.slice(0, 2).join(" · ")}</span><button class="text-link" data-project="${p.title}">Details ↗</button></div><div class="stack">${p.stack.map((t) => `<span>${t}</span>`).join("")}</div><div class="metrics">${p.metrics.join(" · ")}</div></article>`;
+  const visual = p.image ? `<img src="${p.image}" alt="${p.title} illustration" loading="lazy">` : p.short;
+  return `<article class="project-card reveal" data-category="${p.category}"><span class="project-number">0${i + 1}</span><div class="project-visual" style="--project-color:${p.color}">${visual}</div><span class="project-category">${p.category}</span><h3>${p.title}</h3><div class="project-meta"><span>${p.role}</span><span>${p.period}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div><p>${p.desc}</p><div class="project-foot"><span>${p.tags.slice(0, 2).join(" Â· ")}</span><button class="text-link" data-project="${p.title}">Details â†—</button></div><div class="stack">${p.stack.map((t) => `<span>${t}</span>`).join("")}</div><div class="metrics">${p.metrics.join(" Â· ")}</div></article>`;
 }
 function renderProjects() {
   const list = projects.filter(
@@ -439,7 +455,7 @@ function renderServices() {
   $("[data-services]").innerHTML = services
     .map(
       (s) =>
-        `<article class="service-item reveal"><div class="service-left"><span class="service-number">${s.no}</span><h3>${s.title}</h3><p>${s.summary}</p><div class="service-meta"><span>${s.idealFor}</span><span>${s.timeframe}</span></div></div><div class="service-right"><ul class="service-details">${s.details.map((d) => `<li>${d}</li>`).join("")}</ul><div class="stack">${s.stack.map((t) => `<span>${t}</span>`).join("")}</div><span class="service-arrow">↗</span></div></article>`,
+        `<article class="service-item reveal"><div class="service-left"><span class="service-number">${s.no}</span><h3>${s.title}</h3><p>${s.summary}</p><div class="service-meta"><span>${s.idealFor}</span><span>${s.timeframe}</span></div></div><div class="service-right"><ul class="service-details">${s.details.map((d) => `<li>${d}</li>`).join("")}</ul><div class="stack">${s.stack.map((t) => `<span>${t}</span>`).join("")}</div><span class="service-arrow">â†—</span></div></article>`,
     )
     .join("");
 }
@@ -447,7 +463,7 @@ function renderExperience() {
   $("[data-experience]").innerHTML = experience
     .map(
       (e) =>
-        `<article class="timeline-item reveal"><time>${e.date}</time><div><h3>${e.role}</h3><span class="project-category">${e.company}</span><span class="timeline-meta">${e.location} · ${e.type}</span></div><p>${e.desc}</p><ul class="achievements">${e.achievements.map((a) => `<li>${a}</li>`).join("")}</ul></article>`,
+        `<article class="timeline-item reveal"><time>${e.date}</time><div><h3>${e.role}</h3><span class="project-category">${e.company}</span><span class="timeline-meta">${e.location} Â· ${e.type}</span></div><p>${e.desc}</p><ul class="achievements">${e.achievements.map((a) => `<li>${a}</li>`).join("")}</ul></article>`,
     )
     .join("");
 }
@@ -521,7 +537,7 @@ function openProject(title) {
   if (!p) return;
   const modal = $("[data-modal]");
   $("[data-modal-content]").innerHTML =
-    `<p class="modal-kicker">${p.category}</p><h2>${p.title}</h2><div class="project-meta" style="margin:16px 0 10px"><span>${p.role}</span><span>${p.period}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div><p>${p.desc}</p><div class="modal-metrics">${p.metrics.map((m) => `<span class="metric">${m}</span>`).join("")}</div><div class="modal-tags">${[...p.tags, ...p.stack].map((t) => `<span>${t}</span>`).join("")}</div>${p.live ? `<a class="button button-accent" href="${p.live}" target="_blank" rel="noreferrer" style="margin-top:28px">Open live project <span>↗</span></a>` : ""}`;
+    `<p class="modal-kicker">${p.category}</p><h2>${p.title}</h2><div class="project-meta" style="margin:16px 0 10px"><span>${p.role}</span><span>${p.period}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div><p>${p.desc}</p><div class="modal-metrics">${p.metrics.map((m) => `<span class="metric">${m}</span>`).join("")}</div><div class="modal-tags">${[...p.tags, ...p.stack].map((t) => `<span>${t}</span>`).join("")}</div>${p.live ? `<a class="button button-accent" href="${p.live}" target="_blank" rel="noreferrer" style="margin-top:28px">Open live project <span>â†—</span></a>` : ""}`;
   modal.showModal();
 }
 function setup() {
@@ -601,7 +617,7 @@ function onScroll() {
 function updateTime() {
   const now = new Date();
   $("[data-time]").textContent =
-    `Yangon · ${new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Yangon", hour: "2-digit", minute: "2-digit", hour12: true }).format(now)}`;
+    `Yangon Â· ${new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Yangon", hour: "2-digit", minute: "2-digit", hour12: true }).format(now)}`;
 }
 function startSplash() {
   const splash = $("[data-splash]"),
@@ -644,3 +660,4 @@ document.addEventListener("DOMContentLoaded", () => {
   startSplash();
   setup();
 });
+

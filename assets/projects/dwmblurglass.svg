@@ -1,0 +1,15 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#25586b"/><stop offset="1" stop-color="#0a171d"/></linearGradient>
+    <linearGradient id="pane" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e8faff" stop-opacity=".22"/><stop offset="1" stop-color="#7dd3fc" stop-opacity=".08"/></linearGradient>
+    <filter id="blur" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.2"/></filter>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <circle cx="245" cy="35" r="90" fill="#7dd3fc" fill-opacity=".14"/>
+  <rect x="52" y="34" width="156" height="98" rx="18" fill="url(#pane)" stroke="#dff7ff" stroke-opacity=".8"/>
+  <rect x="112" y="56" width="156" height="98" rx="18" fill="#9fe7ff" fill-opacity=".14" stroke="#8fdfff"/>
+  <g filter="url(#blur)" opacity=".9"><rect x="74" y="58" width="54" height="10" rx="5" fill="#fff"/><rect x="74" y="76" width="36" height="8" rx="4" fill="#e8faff"/><rect x="134" y="80" width="54" height="10" rx="5" fill="#fff"/><rect x="134" y="98" width="40" height="8" rx="4" fill="#e8faff"/></g>
+  <rect x="132" y="96" width="18" height="18" rx="5" fill="#e8faff" fill-opacity=".35"/>
+  <text x="28" y="158" fill="#f2fcff" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">DWMBlurGlass</text>
+  <text x="28" y="172" fill="#bfefff" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">WINDOWS AERO</text>
+</svg>

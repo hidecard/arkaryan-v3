@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#76501a"/><stop offset="1" stop-color="#211405"/></linearGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <circle cx="250" cy="34" r="70" fill="#fde68a" fill-opacity=".14"/>
+  <path d="M76 40c28-14 56-14 84 0v96c-28-12-56-12-84 0V40z" fill="#f59e0b" fill-opacity=".18" stroke="#fde68a" stroke-width="4"/>
+  <path d="M160 40c28-14 56-14 84 0v96c-28-12-56-12-84 0V40z" fill="#f59e0b" fill-opacity=".28" stroke="#fde68a" stroke-width="4"/>
+  <path d="M94 66h34M94 84h26M94 102h20M178 66h34M178 84h26M178 102h20" stroke="#fff7d6" stroke-width="4.5" stroke-linecap="round"/>
+  <circle cx="160" cy="30" r="14" fill="#fde68a"/><text x="154" y="35" fill="#6b4208" font-family="Segoe UI,sans-serif" font-size="14" font-weight="700">A</text>
+  <path d="M56 132c20 10 40 10 60 0s40-10 60 0 40 10 60 0 20-10 28 0" stroke="#fde68a" stroke-opacity=".35" stroke-width="5" stroke-linecap="round"/>
+  <text x="28" y="158" fill="#fff9e8" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">KG English App</text>
+  <text x="28" y="172" fill="#fde68a" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">LEARN · PLAY</text>
+</svg>

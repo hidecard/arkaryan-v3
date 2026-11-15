@@ -1,0 +1,14 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#2f5a43"/><stop offset="1" stop-color="#0b1811"/></linearGradient>
+    <radialGradient id="g" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(250 30) rotate(90) scale(90)"><stop stop-color="#7ce7a8" stop-opacity=".35"/><stop offset="1" stop-color="#7ce7a8" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <circle cx="250" cy="30" r="90" fill="url(#g)"/>
+  <circle cx="160" cy="82" r="46" fill="#d8ffe8" fill-opacity=".06" stroke="#bff4d6" stroke-opacity=".2"/>
+  <path d="M160 136s-62-34-62-72c0-18 14-32 32-32 14 0 24 8 30 18 6-10 16-18 30-18 18 0 32 14 32 32 0 38-62 72-62 72z" fill="#68d391" fill-opacity=".22" stroke="#c8f7da" stroke-width="5"/>
+  <path d="M160 66v52M134 92h52" stroke="#f4fff8" stroke-width="6" stroke-linecap="round"/>
+  <rect x="30" y="126" width="260" height="10" rx="5" fill="#86efac" fill-opacity=".18"/>
+  <text x="28" y="158" fill="#f2fff7" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">WeCare</text>
+  <text x="28" y="172" fill="#c8f7da" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">COMMUNITY · GIVING</text>
+</svg>

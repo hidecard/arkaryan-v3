@@ -1,0 +1,13 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="320" y2="180" gradientUnits="userSpaceOnUse"><stop stop-color="#542948"/><stop offset="1" stop-color="#140b14"/></linearGradient>
+  </defs>
+  <rect width="320" height="180" fill="url(#bg)"/>
+  <rect x="40" y="28" width="240" height="112" rx="16" fill="#100913" stroke="#d8b4fe" stroke-opacity=".55"/>
+  <rect x="40" y="28" width="240" height="26" rx="16" fill="#c084fc" fill-opacity=".18"/>
+  <circle cx="60" cy="41" r="4.5" fill="#f9a8d4"/><circle cx="75" cy="41" r="4.5" fill="#fcd34d"/><circle cx="90" cy="41" r="4.5" fill="#86efac"/>
+  <g stroke-width="4.5" stroke-linecap="round"><path d="M62 74h28" stroke="#f9a8d4"/><path d="M96 74h56" stroke="#e9d5ff"/><path d="M62 92h44" stroke="#c084fc"/><path d="M112 92h30" stroke="#93c5fd"/><path d="M148 92h64" stroke="#e9d5ff"/><path d="M62 110h36" stroke="#86efac"/><path d="M104 110h54" stroke="#e9d5ff"/><path d="M164 110h30" stroke="#fcd34d"/></g>
+  <g transform="translate(242 98)"><rect x="-18" y="-18" width="36" height="36" rx="10" fill="#c084fc" fill-opacity=".18" stroke="#e9d5ff"/><path d="M-6 0l14 8-14 8V0z" fill="#e9d5ff"/></g>
+  <text x="28" y="158" fill="#fbf5ff" font-family="'Space Grotesk',Segoe UI,sans-serif" font-size="20" font-weight="700">Zap VS Code Ext</text>
+  <text x="28" y="172" fill="#e3c6ff" font-family="ui-monospace,monospace" font-size="10" letter-spacing="2">SYNTAX · TOOLING</text>
+</svg>
