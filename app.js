@@ -290,13 +290,13 @@ const experience = [
     achievements: ["Founded k Square software firm", "Custom enterprise SaaS deliveries", "Team leadership and client relations"],
   },
   {
-    date: "2017 — Present",
+    date: "2014 — Present",
     role: "Independent Software Developer",
     company: "Freelance",
     location: "Yangon, Myanmar",
     type: "Freelance",
-    desc: "Delivering software solutions and mentoring students through online batches since 2017.",
-    achievements: ["Building digital products independently since 2017", "Selected product and client work", "Teaching and mentoring experience"],
+    desc: "Building and delivering software products and client solutions since 2014, alongside teaching and mentoring.",
+    achievements: ["Building digital products independently since 2014", "Selected product and client work", "Teaching and mentoring experience"],
   },
 ];
 const skills = [
