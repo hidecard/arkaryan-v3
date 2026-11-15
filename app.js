@@ -7,7 +7,7 @@ const projects = [
     role: "Creator & Lead Engineer",
     period: "2023 — Present",
     desc: "A fast, expressive programming language and developer tool with a Rust runtime, dynamic typing and a self-hosting compiler toolchain.",
-    metrics: ["Self-hosting compiler", "10k+ lines compiled", "VS Code extension"],
+    metrics: ["Self-hosting compiler", "Rust runtime", "VS Code extension"],
     stack: ["Rust", "Compiler", "CLI", "TypeScript"],
     tags: ["Rust", "Compiler", "Developer tools"],
     color: "#352124",
@@ -28,7 +28,7 @@ const projects = [
     stack: ["Rust", "Wasmtime", "WebAssembly", "Security"],
     tags: ["Rust", "Wasmtime", "Security"],
     color: "#1e2e38",
-    live: "https://github.com/hidecard/CortexEnv",
+    source: "https://github.com/hidecard/CortexEnv",
     status: "Open source",
   },
   {
@@ -39,12 +39,14 @@ const projects = [
     role: "Founder & Lead Developer",
     period: "2023 — Present",
     desc: "An intelligent bus route guide for Yangon with offline functionality, NFC card reading, BFS routing and Burmese voice alerts.",
-    metrics: ["100+ bus routes", "Offline maps", "Burmese voice TTS"],
+    metrics: ["Offline maps", "NFC card reading", "Burmese voice TTS"],
     stack: ["Flutter", "Dart", "Gemini AI", "SQLite"],
     tags: ["Flutter", "Dart", "Gemini AI"],
     color: "#403318",
     live: "https://play.google.com/store/apps/details?id=net.arkaryan.ybs_ai",
     source: "https://github.com/hidecard/yangon-ybs-guide",
+    sourceLabel: "Route data",
+    extraLinks: [{ label: "App source", url: "https://github.com/hidecard/YBS-AI-App" }],
     status: "Play Store",
   },
   {
@@ -60,6 +62,7 @@ const projects = [
     tags: ["Laravel", "React", "MySQL"],
     color: "#24362b",
     live: "https://wecare.spacetikapp.com/",
+    source: "https://github.com/hidecard/WeCare_MM",
     status: "Launched",
   },
   {
@@ -90,6 +93,7 @@ const projects = [
     tags: ["Node.js", "Telegram", "Turso"],
     color: "#3b1d2a",
     live: "https://t.me/mmcupid_bot",
+    source: "https://github.com/hidecard/mm-match",
     status: "Active",
   },
   {
@@ -105,6 +109,8 @@ const projects = [
     tags: ["TypeScript", "AI", "Vite"],
     color: "#25362f",
     live: "https://mm-career-ai.vercel.app/",
+    source: "https://github.com/hidecard/mm-career-ai",
+    caseStudy: "/projects/mm-career-ai/",
     status: "Beta",
   },
   {
@@ -135,7 +141,7 @@ const projects = [
     stack: ["TypeScript", "VS Code API"],
     tags: ["TypeScript", "VS Code", "Productivity"],
     color: "#1c2a38",
-    live: "https://marketplace.visualstudio.com/",
+    live: "",
     status: "Published",
   },
   {
@@ -146,11 +152,12 @@ const projects = [
     role: "Creator & Maintainer",
     period: "2022 — Present",
     desc: "A lightweight JavaScript library published on npm for DOM manipulation, animation, reactive state and routing.",
-    metrics: ["npm published", "~5k downloads", "ES modules"],
+    metrics: ["npm package", "ES modules", "Reactive state"],
     stack: ["JavaScript", "ES Modules", "DOM"],
     tags: ["JavaScript", "ES Modules", "Library"],
     color: "#49371c",
     live: "https://www.npmjs.com/package/onekit-js",
+    source: "https://github.com/hidecard/onekit-js",
     status: "npm",
   },
   {
@@ -211,6 +218,7 @@ const projects = [
     tags: ["Next.js", "Prisma", "Security"],
     color: "#352327",
     live: "",
+    source: "https://github.com/hidecard/CyberSec-Lab",
     status: "Active",
   },
 ];
@@ -413,12 +421,13 @@ const skills = [
 ];
 const $ = (s, p = document) => p.querySelector(s);
 const $$ = (s, p = document) => [...p.querySelectorAll(s)];
+const tr = (text) => window.portfolioTranslate ? window.portfolioTranslate(text) : text;
 function renderFilters() {
   const cats = ["All", ...new Set(projects.map((p) => p.category))];
   $("[data-filters]").innerHTML = cats
     .map(
       (c, i) =>
-        `<button class="${i === 0 ? "is-active" : ""}" data-filter="${c}">${c}</button>`,
+        `<button class="${i === 0 ? "is-active" : ""}" data-filter="${c}">${tr(c)}</button>`,
     )
     .join("");
 }
@@ -426,17 +435,20 @@ let activeFilter = "All",
   visibleCount = 6;
 function projectCard(p, i) {
   const logo = p.image ? `<img src="${p.image}" alt="${p.title} logo" loading="lazy">` : `<span class="project-fallback">${p.short}</span>`;
-  const liveLink = p.live ? `<a class="project-visit" href="${p.live}" target="_blank" rel="noopener noreferrer">${p.title === "YBS AI" ? "Google Play ↗" : "Live ↗"}</a>` : "";
-  const sourceLink = p.source ? `<a class="project-visit" href="${p.source}" target="_blank" rel="noopener noreferrer">Source ↗</a>` : "";
-  const proofLink = p.proof ? `<a class="project-visit" href="${p.proof}" target="_blank" rel="noopener noreferrer">Marketplace ↗</a>` : "";
+  const liveLabel = p.liveLabel || (p.title === "YBS AI" ? "Google Play ↗" : "Live ↗");
+  const liveLink = p.live ? `<a class="project-visit" href="${p.live}" target="_blank" rel="noopener noreferrer">${tr(liveLabel)}</a>` : "";
+  const sourceLink = p.source ? `<a class="project-visit" href="${p.source}" target="_blank" rel="noopener noreferrer">${tr(p.sourceLabel ? `${p.sourceLabel} ↗` : "Source ↗")}</a>` : "";
+  const proofLink = p.proof ? `<a class="project-visit" href="${p.proof}" target="_blank" rel="noopener noreferrer">${tr("Marketplace ↗")}</a>` : "";
+  const extraLinks = (p.extraLinks || []).map((link) => `<a class="project-visit" href="${link.url}" target="_blank" rel="noopener noreferrer">${tr(link.label + " ↗")}</a>`).join("");
+  const caseStudyLink = p.caseStudy ? `<a class="project-visit" href="${p.caseStudy}">${tr("Case study ↗")}</a>` : "";
   return `<article class="project-card reveal" data-category="${p.category}">
-    <div class="project-visual" style="--project-color:${p.color}"><span class="project-badge">${p.category}</span>${logo}</div>
+    <div class="project-visual" style="--project-color:${p.color}"><span class="project-badge">${tr(p.category)}</span>${logo}</div>
     <div class="project-body">
-      <div class="project-top"><span class="project-number">0${i + 1}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div>
+      <div class="project-top"><span class="project-number">0${i + 1}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${tr(p.status)}</span></div>
       <h3>${p.title}</h3>
-      <p>${p.desc}</p>
+      <p>${tr(p.desc)}</p>
       <div class="stack">${p.stack.slice(0,4).map((t) => `<span>${t}</span>`).join("")}</div>
-      <div class="project-foot"><button class="text-link" data-project="${p.title}">Case details</button><span class="project-links">${liveLink}${sourceLink}${proofLink}</span></div>
+      <div class="project-foot"><button class="text-link" data-project="${p.title}">${tr("Case details")}</button><span class="project-links">${caseStudyLink}${liveLink}${sourceLink}${proofLink}${extraLinks}</span></div>
     </div>
   </article>`;
 }
@@ -456,7 +468,7 @@ function renderServices() {
   $("[data-services]").innerHTML = services
     .map(
       (s) =>
-        `<article class="service-item reveal"><div class="service-left"><span class="service-number">${s.no}</span><h3>${s.title}</h3><p>${s.summary}</p><div class="service-meta"><span>${s.idealFor}</span><span>${s.timeframe}</span></div></div><div class="service-right"><ul class="service-details">${s.details.map((d) => `<li>${d}</li>`).join("")}</ul><div class="stack">${s.stack.map((t) => `<span>${t}</span>`).join("")}</div><span class="service-arrow">↗</span></div></article>`,
+        `<article class="service-item reveal"><div class="service-left"><span class="service-number">${s.no}</span><h3>${tr(s.title)}</h3><p>${tr(s.summary)}</p><div class="service-meta"><span>${tr(s.idealFor)}</span><span>${tr(s.timeframe)}</span></div></div><div class="service-right"><ul class="service-details">${s.details.map((d) => `<li>${tr(d)}</li>`).join("")}</ul><div class="stack">${s.stack.map((t) => `<span>${t}</span>`).join("")}</div><span class="service-arrow">↗</span></div></article>`,
     )
     .join("");
 }
@@ -464,7 +476,7 @@ function renderExperience() {
   $("[data-experience]").innerHTML = experience
     .map(
       (e) =>
-        `<article class="timeline-item reveal"><time>${e.date}</time><div><h3>${e.role}</h3><span class="project-category">${e.company}</span><span class="timeline-meta">${e.location} · ${e.type}</span></div><p>${e.desc}</p><ul class="achievements">${e.achievements.map((a) => `<li>${a}</li>`).join("")}</ul></article>`,
+        `<article class="timeline-item reveal"><time>${e.date.replace("Present", tr("Present"))}</time><div><h3>${tr(e.role)}</h3><span class="project-category">${e.company}</span><span class="timeline-meta">${tr(e.location)} · ${tr(e.type)}</span></div><p>${tr(e.desc)}</p><ul class="achievements">${e.achievements.map((a) => `<li>${tr(a)}</li>`).join("")}</ul></article>`,
     )
     .join("");
 }
@@ -539,8 +551,8 @@ function renderSkills() {
           <div class="skill-head">
             <span class="skill-number">0${s.no}</span>
             <div class="skill-head-copy">
-              <h3>${s.title}</h3>
-              <p class="skill-intro">${s.intro}</p>
+              <h3>${tr(s.title)}</h3>
+              <p class="skill-intro">${tr(s.intro)}</p>
             </div>
           </div>
           <div class="skill-cols">
@@ -548,7 +560,7 @@ function renderSkills() {
               .map(
                 (g) =>
                   `<div class="skill-column">
-                    <span class="skill-column-label">${g.label}</span>
+                    <span class="skill-column-label">${tr(g.label)}</span>
                     <ul class="skill-list">${g.items
                       .map(
                         (i) =>
@@ -619,8 +631,26 @@ function openProject(title) {
   const p = projects.find((x) => x.title === title);
   if (!p) return;
   const modal = $("[data-modal]");
-  $("[data-modal-content]").innerHTML =
-    `<p class="modal-kicker">${p.category}</p><h2>${p.title}</h2><div class="project-meta" style="margin:16px 0 10px"><span>${p.role}</span><span>${p.period}</span><span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${p.status}</span></div><p>${p.desc}</p><div class="modal-metrics">${p.metrics.map((m) => `<span class="metric">${m}</span>`).join("")}</div><div class="modal-tags">${[...p.tags, ...p.stack].map((t) => `<span>${t}</span>`).join("")}</div>${p.live ? `<a class="button button-accent" href="${p.live}" target="_blank" rel="noopener noreferrer" style="margin-top:28px">Open project <span>↗</span></a>` : ""}${p.source ? `<a class="button button-outline" href="${p.source}" target="_blank" rel="noopener noreferrer" style="margin:28px 0 0 12px">GitHub source <span>↗</span></a>` : ""}${p.proof ? `<a class="button button-outline" href="${p.proof}" target="_blank" rel="noopener noreferrer" style="margin:28px 0 0 12px">Marketplace <span>↗</span></a>` : ""}`;
+  const links = [
+    p.live && `<a class="button button-accent" href="${p.live}" target="_blank" rel="noopener noreferrer">${tr(p.title === "YBS AI" ? "Google Play ↗" : "Open project ↗")}</a>`,
+    p.source && `<a class="button button-outline" href="${p.source}" target="_blank" rel="noopener noreferrer">${tr(p.sourceLabel ? `${p.sourceLabel} ↗` : "GitHub source ↗")}</a>`,
+    ...(p.extraLinks || []).map((link) => `<a class="button button-outline" href="${link.url}" target="_blank" rel="noopener noreferrer">${tr(link.label + " ↗")}</a>`),
+    p.proof && `<a class="button button-outline" href="${p.proof}" target="_blank" rel="noopener noreferrer">${tr("Marketplace ↗")}</a>`,
+    p.caseStudy && `<a class="button button-outline" href="${p.caseStudy}">${tr("Case study ↗")}</a>`,
+  ].filter(Boolean).join("");
+  $("[data-modal-content]").innerHTML = `
+    <p class="modal-kicker">${tr(p.category)}</p>
+    <h2>${p.title}</h2>
+    <div class="project-meta" style="margin:16px 0 10px">
+      <span>${tr(p.role)}</span><span>${p.period.replace("Present", tr("Present"))}</span>
+      <span class="status-badge"><span class="status-dot-badge" style="background:${p.color}"></span>${tr(p.status)}</span>
+    </div>
+    <h3>${tr("Project overview")}</h3><p>${tr(p.desc)}</p>
+    <h3>${tr("Highlights")}</h3>
+    <div class="modal-metrics">${p.metrics.map((m) => `<span class="metric">${tr(m)}</span>`).join("")}</div>
+    <h3>${tr("Technology")}</h3>
+    <div class="modal-tags">${[...p.tags, ...p.stack].map((tag) => `<span>${tag}</span>`).join("")}</div>
+    <div class="modal-actions">${links}</div>`;
   modal.showModal();
 }
 function setup() {
@@ -679,6 +709,12 @@ function setup() {
   onScroll();
   updateTime();
   setInterval(updateTime, 30000);
+  const languageButton = $("[data-language]");
+  languageButton.textContent = document.documentElement.lang === "my" ? "EN" : "မြန်မာ";
+  languageButton.addEventListener("click", () => {
+    localStorage.setItem("arkaryan-language", document.documentElement.lang === "my" ? "en" : "my");
+    window.location.reload();
+  });
 }
 function onPointerMove(e) {
   const hero = $(".hero-visual");
@@ -703,6 +739,8 @@ function updateTime() {
     `Yangon · ${new Intl.DateTimeFormat("en-GB", { timeZone: "Asia/Yangon", hour: "2-digit", minute: "2-digit", hour12: true }).format(now)}`;
 }
 document.addEventListener("DOMContentLoaded", () => {
+  document.documentElement.lang = localStorage.getItem("arkaryan-language") === "my" ? "my" : "en";
   setup();
+  if (window.portfolioSetStaticLocale) window.portfolioSetStaticLocale();
 });
 
